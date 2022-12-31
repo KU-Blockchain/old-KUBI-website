@@ -1,14 +1,16 @@
-import logo from './kubi logo.png';
-import jayhawk from './jayhawk-4.png';
+import logo from './assets/KUBI-1200-logo.png';
+import jayhawk from './assets/jayhawk-4.png';
+import  NavbarComponent  from './components/navigation/navbar';
 import './App.css';
+import ButtonComponent from './components/button';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} width ="600" height = "400" />
+        <img src={logo} alt="" width ="600" height = "400" />
         <p>
-          KU Blockcain Institute
+          KU Blockchain Institute
         </p>
         <a
           className="App-link"
@@ -18,7 +20,7 @@ function App() {
         >
           KUBI Website
         </a>
-        <img src={jayhawk} width ="600" height = "600" />
+        <img src={jayhawk} alt="" width ="600" height = "600" />
       </header>
     </div>
   );
