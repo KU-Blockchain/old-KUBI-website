@@ -3,9 +3,12 @@ import { Routes, Route, Link } from "react-router-dom"
 import DAO from "./pages/DAO"
 import Home from "./pages/Home"
 import About from "./pages/About"
+import { MantineProvider } from '@mantine/core';
 
 function App() {
   return (
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+
     <div className="App">
       <nav>
         <ul>
@@ -30,6 +33,7 @@ function App() {
         </Routes>
       </div>
     </div>
+    </MantineProvider>
   )
 }
 
