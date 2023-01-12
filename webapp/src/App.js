@@ -1,8 +1,8 @@
 import React from "react"
 import { Routes, Route, Link } from "react-router-dom"
-import Dashboard from "./Dashboard"
-import Home from "./Home"
-import About from "./about"
+import DAO from "./pages/DAO"
+import Home from "./pages/Home"
+import About from "./pages/About"
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="dashboard">Dashboard</Link>
+            <Link to="DAO">DAO</Link>
           </li>
           <li>
             <Link to="about">About</Link>
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="about" element={<About />}></Route>
-          <Route path="dashboard" element={<Dashboard />}></Route>
+          <Route path="DAO" element={<DAO />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>

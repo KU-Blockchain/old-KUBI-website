@@ -1,5 +1,5 @@
 import React from "react"
-import jayhawk from './assets/jayhawk-4.png'
+import jayhawk from '../assets/jayhawk-4.png'
 
 const Home = () => {
   return <div>
