@@ -4,9 +4,10 @@ import { HeaderSimple } from "../components/header";
 import { Routes, Route, Link } from "react-router-dom"
 import DAO from './DAO'
 import Home from './Home'
+import About from "./About"
 
 
-const link = [{ link: "/DAO", label: "DAO" },{ link: "/", label: "Home" }];
+const link = [{ link: "/", label: "Home" },{ link: "/DAO", label: "DAO" },{ link: "/about", label: "About" }];
 function App() {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
@@ -14,6 +15,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/DAO" element={<DAO />} />
+            <Route path="/about" element={<About />} />
         </Routes>
     </MantineProvider>
   );
