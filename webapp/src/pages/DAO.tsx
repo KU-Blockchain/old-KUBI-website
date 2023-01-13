@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
 const DAO = () => {
-  return <div>DAO test</div>
-}
+  return <div>DAO test</div>;
+};
 
-export default DAO
+export default DAO;
