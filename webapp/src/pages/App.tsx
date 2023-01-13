@@ -6,12 +6,12 @@ import About from "./About";
 import { MantineProvider } from "@mantine/core";
 import { HeaderSimple } from "../components/header";
 
-const link = [{ link: "./DAO", label: "DAO" }];
+const link = [{ link: "DAO", label: "DAO" }, { link: "http://localhost:3000/Home", label: "Home" }];
 function App() {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
       <>
-        <HeaderSimple links={link}></HeaderSimple>
+      
 
         <div className="App">
           <nav>
@@ -28,6 +28,7 @@ function App() {
             </ul>
           </nav>
           <div className="main">
+          <HeaderSimple links={link}></HeaderSimple>
             {/* Define all the routes */}
             <Routes>
               <Route path="/" element={<Home />}></Route>
