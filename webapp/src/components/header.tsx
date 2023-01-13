@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createStyles, Header, Container, Group, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { MantineLogo } from "@mantine/ds";
+import logo from "./KUBC-logo.png"
 import React from "react";
 import { Link } from 'react-router-dom'
 
@@ -83,7 +83,7 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
   return (
     <Header height={60} mb={120}>
       <Container className={classes.header}>
-        <MantineLogo size={28} />
+      <img src={logo} alt="" width ="70" height = "70" />
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>

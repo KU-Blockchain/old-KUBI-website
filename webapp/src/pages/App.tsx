@@ -7,7 +7,7 @@ import Home from './Home'
 import About from './About'
 
 
-const link = [{ link: "/", label: "Home" },{ link: "/DAO", label: "DAO" }, { link: "/About", label: "About" }];
+const link = [{ link: "/", label: "Home" },{ link: "/DAO", label: "DAO" }, { link: "/about", label: "About" }];
 function App() {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
@@ -15,7 +15,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/DAO" element={<DAO />} />
-            <Route path="/About" element={<About />} />
+            <Route path="/about" element={<About />} />
         </Routes>
     </MantineProvider>
   );
