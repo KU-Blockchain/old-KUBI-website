@@ -4,8 +4,7 @@ import { Carousel } from "@mantine/carousel";
 const Home = () => {
   return (
     <>
-      <div>Home</div>;
-      <Carousel></Carousel>
+      <div>Home</div>
     </>
   );
 };
