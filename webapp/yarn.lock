@@ -1643,7 +1643,7 @@
 
 "@mantine/core@^5.10.0":
   version "5.10.0"
-  resolved "https://registry.npmjs.org/@mantine/core/-/core-5.10.0.tgz"
+  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-5.10.0.tgz#b66d4d8ec0ffd47c40645f502bc9758a5e980797"
   integrity sha512-if272RiYPK0nQQdGNwcCSY7bCPJW9455qXlRhnYOr021xh89T8WFVPeDw4uwcxoXsXdKRV5GAi9irSnsUqsjJQ==
   dependencies:
     "@floating-ui/react-dom-interactions" "^0.10.1"
@@ -1651,6 +1651,13 @@
     "@mantine/utils" "5.10.0"
     "@radix-ui/react-scroll-area" "1.0.2"
     react-textarea-autosize "8.3.4"
+
+"@mantine/ds@^5.10.0":
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/@mantine/ds/-/ds-5.10.0.tgz#dc5898f78475a2f3fb065ccb19aeec939b54dc83"
+  integrity sha512-B2fmkHzO0fGHNsa6UbEyX96o+/jJVFUPUvtsorj9h/pcRaKDGfXwD/n9oplgf7blAmgbvnjRtA2wVUVRzdj8sA==
+  dependencies:
+    "@mantine/utils" "5.10.0"
 
 "@mantine/hooks@^5.10.0":
   version "5.10.0"
@@ -2274,6 +2281,15 @@
 "@types/react@*":
   version "18.0.26"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.0.26.tgz"
+  integrity sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@^18.0.26":
+  version "18.0.26"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.26.tgz#8ad59fc01fef8eaf5c74f4ea392621749f0b7917"
   integrity sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==
   dependencies:
     "@types/prop-types" "*"
