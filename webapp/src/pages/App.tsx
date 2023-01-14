@@ -1,22 +1,28 @@
 import React from "react";
 import { MantineProvider } from "@mantine/core";
 import { HeaderSimple } from "../components/header";
-import { Routes, Route, Link } from "react-router-dom"
-import DAO from './DAO'
-import Home from './Home'
-import About from './About'
+import { Routes, Route, Link } from "react-router-dom";
+import DAO from "./DAO";
+import Home from "./Home";
+import About from "./About";
+import Events from "./Events";
 
-
-const link = [{ link: "/", label: "Home" },{ link: "/DAO", label: "DAO" }, { link: "/about", label: "About" }];
+const link = [
+  { link: "/", label: "Home" },
+  { link: "/DAO", label: "DAO" },
+  { link: "/about", label: "About" },
+  { link: "/events", label: "Events"}
+];
 function App() {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
-        <HeaderSimple links={link}></HeaderSimple>
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/DAO" element={<DAO />} />
-            <Route path="/about" element={<About />} />
-        </Routes>
+      <HeaderSimple links={link}></HeaderSimple>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/DAO" element={<DAO />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/events" element={<Events />} />
+      </Routes>
     </MantineProvider>
   );
 }
