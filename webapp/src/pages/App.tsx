@@ -6,6 +6,7 @@ import DAO from "./DAO";
 import Home from "./Home";
 import About from "./About";
 import Events from "./Events";
+import theme from "./theme";
 
 const link = [
   { link: "/", label: "Home" },
@@ -15,7 +16,7 @@ const link = [
 ];
 function App() {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
       <HeaderSimple links={link}></HeaderSimple>
       <Routes>
         <Route path="/" element={<Home />} />
