@@ -8,10 +8,8 @@ import { Link } from 'react-router-dom'
 const useStyles = createStyles((theme) => ({
   header: {
     display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    height: "100%",
-    
+    justifyContent: "space-between"
+
   },
 
   links: {
@@ -84,8 +82,9 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
   return (
     <Header height={140} mb={20} >
       <Container className={classes.header}>
-      <img src={logo} alt="" height={108*1.25} width={150*1.25} />
-        <Group spacing={10} className={classes.links}>
+        <img src={logo} alt="" height={108*1.25} width={150*1.25} />
+        <Group spacing={10} className={classes.links}  align= "center">
+          
           {items}
         </Group>
 
