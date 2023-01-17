@@ -1,7 +1,9 @@
 import React from "react";
+import Web3 from "web3";
+
+
 
 const DAO = () => {
-  console.log("got to DAO page");
   return <div>DAO test</div>;
 };
 

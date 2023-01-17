@@ -11,7 +11,7 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    backgroundSize: 'cover',
+    backgroundSize: "cover",
     backgroundPosition: 'center',
   },
 
