@@ -1,7 +1,21 @@
-import React from "react";
+
 import jayhawk from "./jayhawk-4.png"
-import { Calendar } from 'react-big-calendar'
-import 'react-big-calendar/lib/css/react-big-calendar.css'
+
+import React from 'react';
+import ApiCalendar from 'react-google-calendar-api';
+
+const config = {
+  "clientId": "<CLIENT_ID>",
+  "apiKey": "<API_KEY>",
+  "scope": "https://www.googleapis.com/auth/calendar",
+  "discoveryDocs": [
+    "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"
+  ]
+}
+
+const apiCalendar = new ApiCalendar(config)
+
+
 
 
 const Events = () => {
