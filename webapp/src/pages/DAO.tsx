@@ -38,6 +38,7 @@ if (window.ethereum) {
 interface State {
   account: string;
   balance: string;
+  network: string;
 }
 
 class DAO extends React.Component<{}, State> {
@@ -46,6 +47,7 @@ class DAO extends React.Component<{}, State> {
     this.state = {
       account: "",
       balance: "",
+      network: "",
     };
   }
 
@@ -74,7 +76,7 @@ class DAO extends React.Component<{}, State> {
             .catch((err: any) => console.log(err));
         }
      else {
-      console.log("Web3 provider not found");
+      alert("Web3 provider not found. Refresh with Metamask");
     }
   }
 

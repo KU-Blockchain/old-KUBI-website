@@ -10,9 +10,9 @@ import theme from "./theme";
 
 const link = [
   { link: "/", label: "Home" },
-  { link: "/DAO", label: "DAO" },
   { link: "/about", label: "About" },
-  { link: "/events", label: "Events"}
+  { link: "/events", label: "Events"},
+  { link: "/DAO", label: "DAO" },
 ];
 function App() {
   return (
