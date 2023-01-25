@@ -1,36 +1,5 @@
 import React from "react";
-import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
-
-
-var ethBalance = "5"
-
-
-
-var test = "metmask is installed"
-
-
-
-
-
-let provider;
-
-if (window.ethereum) {
-  window.ethereum.request({method:'eth_requestAccounts'}).then((res: any) => {
-    console.log(res);
-    provider = new ethers.providers.Web3Provider(window.ethereum);
-    provider.getNetwork().then(network => {
-      console.log(`Connected to network: ${network.name}`);
-    });
-    provider.listAccounts().then((accounts) => {
-      console.log(`Connected accounts: ${accounts}`);
-    });
-  }).catch((err: any) => console.log(err))
-} else {
-  console.log("Web3 provider not found. Refresh Metamask");
-}
-
-
 
 
 
@@ -38,7 +7,7 @@ if (window.ethereum) {
 interface State {
   account: string;
   balance: string;
-  network: string;
+  Network: string;
 }
 
 class DAO extends React.Component<{}, State> {
@@ -47,19 +16,20 @@ class DAO extends React.Component<{}, State> {
     this.state = {
       account: "",
       balance: "",
-      network: "",
+      Network: "",
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     if (window.ethereum) {
+      let provider = new ethers.providers.Web3Provider(
+        window.ethereum
+      );
       window.ethereum
         .request({method:'eth_requestAccounts'})
         .then(async (res: any) => {
           console.log(res);
-          let provider = new ethers.providers.Web3Provider(
-            window.ethereum
-          );
+
           let address = res[0];
           this.setState({ account: address });
           console.log(address)
@@ -67,6 +37,7 @@ class DAO extends React.Component<{}, State> {
           const balance = await provider.getBalance(address);
           const balanceInEth = ethers.utils.formatEther(balance);
           
+
           console.log(balanceInEth);
               this.setState(prevState => ({
                 ...prevState,
@@ -74,6 +45,12 @@ class DAO extends React.Component<{}, State> {
               }));
             })
             .catch((err: any) => console.log(err));
+          
+          const network = await provider.getNetwork();
+          const networkName = network.name;
+          this.setState({ Network: networkName });
+            
+  
         }
      else {
       alert("Web3 provider not found. Refresh with Metamask");
@@ -87,13 +64,13 @@ render(){
       DAO test
     </div>
     <div>
-    {test}
-    </div>
-    <div>
         Account: {this.state.account}
     </div>
     <div>
         Balance: {this.state.balance ||0}
+    </div>
+    <div>
+        Network: {this.state.Network}
     </div>
     </>
   ) 
