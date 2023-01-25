@@ -1,5 +1,8 @@
 import React from "react";
 import jayhawk from "./jayhawk-4.png"
+import { Calendar } from 'react-big-calendar'
+import 'react-big-calendar/lib/css/react-big-calendar.css'
+
 
 const Events = () => {
   return (
