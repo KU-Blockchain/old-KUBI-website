@@ -8,9 +8,8 @@ import { Link } from 'react-router-dom'
 const useStyles = createStyles((theme) => ({
   header: {
     display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    height: "100%",
+    justifyContent: "space-between"
+
   },
 
   links: {
@@ -28,14 +27,14 @@ const useStyles = createStyles((theme) => ({
   link: {
     display: "block",
     lineHeight: 1,
-    padding: "8px 12px",
-    borderRadius: theme.radius.sm,
+    padding: "20px 40px",
+    borderRadius: theme.radius.md,
     textDecoration: "none",
     color:
       theme.colorScheme === "dark"
         ? theme.colors.dark[0]
         : theme.colors.gray[7],
-    fontSize: theme.fontSizes.sm,
+    fontSize: theme.fontSizes.xl,
     fontWeight: 500,
 
     "&:hover": {
@@ -81,10 +80,11 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
   ));
 
   return (
-    <Header height={60} mb={120}>
+    <Header height={140} mb={20} >
       <Container className={classes.header}>
-      <img src={logo} alt="" width ="70" height = "70" />
-        <Group spacing={5} className={classes.links}>
+        <img src={logo} alt="" height={108*1.25} width={150*1.25} />
+        <Group spacing={10} className={classes.links}  align= "center">
+          
           {items}
         </Group>
 

@@ -1,6 +1,7 @@
 import { Avatar, Text, Button, Paper } from '@mantine/core';
 import React from 'react';
 
+
 interface IbioCardProps {
   avatar: string;
   name: string;

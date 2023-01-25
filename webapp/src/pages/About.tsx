@@ -1,12 +1,13 @@
 import * as React from "react";
 import { BioCard } from "../components/bioCard";
+import jayhawk from "./jayhawk-4.png"
 
 const About = () => {
   return (
     <>
       <div>About</div>
       <BioCard
-        avatar={"avatar"}
+        avatar={jayhawk}
         name={"Emma Nasseri"}
         email={"enasseri02@ku.edu"}
         job={"President"}
@@ -20,7 +21,7 @@ const About = () => {
       <BioCard
         avatar={"avatar"}
         name={"Hudson Headley"}
-        email={"email address"}
+        email={"hudsonh@ku.edu"}
         job={"Vice President of Engineering"}
       ></BioCard>
       <BioCard

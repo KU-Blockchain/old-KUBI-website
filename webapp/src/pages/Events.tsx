@@ -1,18 +1,13 @@
 import React from "react";
 import jayhawk from "./jayhawk-4.png"
-import { CardsCarousel} from "../components/carousel"
 
-
-
-const Home = () => {
+const Events = () => {
   return (
     <>
-      <CardsCarousel />
       <img src={jayhawk} alt="" width ="500" height = "500" />
-      <div>Home</div>
-      
+      <div>Events</div>
     </>
   );
 };
 
-export default Home;
+export default Events;

@@ -2,6 +2,7 @@ import * as React from "react";
 import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
 import { createStyles, Paper, Text, Title, Button, useMantineTheme } from '@mantine/core';
+import perry from "./perry.jpg"
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -10,7 +11,7 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    backgroundSize: 'cover',
+    backgroundSize: "cover",
     backgroundPosition: 'center',
   },
 
@@ -45,11 +46,11 @@ function Card({ image, title, category }: CardProps) {
       shadow="md"
       p="xl"
       radius="md"
-      sx={{ backgroundImage: `url(${image})` }}
+      sx={{ backgroundImage: `url(${image})`}}
       className={classes.card}
     >
       <div>
-        <Text className={classes.category} size="xs">
+        <Text className={classes.category} size="md">
           {category}
         </Text>
         <Title order={3} className={classes.title}>
@@ -66,9 +67,9 @@ function Card({ image, title, category }: CardProps) {
 const data = [
   {
     image:
-      'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best forests to visit in North America',
-    category: 'nature',
+      perry,
+    title: 'Perry Alexander',
+    category: 'Faculty',
   },
   {
     image:
