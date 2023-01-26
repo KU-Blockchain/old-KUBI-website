@@ -1,5 +1,9 @@
 import React from "react";
-import { ethers } from 'ethers';
+import { ethers, Contract } from 'ethers';
+import KUBIABI from "../ABI/KUBI.json";
+
+
+const KUBIXadress = "0x1D8630A8A34ae414c925ebF87FD27af66f3A52e8"
 
 
 
@@ -9,6 +13,7 @@ interface State {
   balance: string;
   Network: string;
   DAO: string;
+  KUBIX: string;
 }
 
 class DAO extends React.Component<{}, State> {
@@ -19,6 +24,7 @@ class DAO extends React.Component<{}, State> {
       balance: "",
       Network: "",
       DAO: "",
+      KUBIX: "",
     };
   }
 
@@ -32,7 +38,7 @@ class DAO extends React.Component<{}, State> {
         .then(async (res: any) => {
           console.log(res);
 
-          let address = res[0];
+          const address = res[0];
           this.setState({ account: address });
           console.log(address)
             
@@ -41,7 +47,7 @@ class DAO extends React.Component<{}, State> {
           
 
           console.log(balanceInEth);
-              this.setState(prevState => ({
+          this.setState(prevState => ({
                 ...prevState,
                 balance: balanceInEth
               }));
@@ -55,6 +61,17 @@ class DAO extends React.Component<{}, State> {
           const DAOBalance = await provider.getBalance("0xf191fe5a4332d27ea504b298b5db8595c830f4c6");
           const DAObalanceInEth = ethers.utils.formatEther(DAOBalance);
           this.setState({ DAO: DAObalanceInEth });
+          
+        
+          
+
+          const contract = new Contract(KUBIXadress,KUBIABI, provider);
+          const KUBIbalance = await contract.balanceOf(this.state.account);
+          this.setState({ KUBIX: KUBIbalance });
+
+       
+
+
             
   
         }
@@ -80,6 +97,9 @@ render(){
     </div>
     <div>
         DAO Balance: {this.state.DAO}
+    </div>
+    <div>
+        KUBIX Balance: {this.state.KUBIX}
     </div>
     </>
   ) 
