@@ -8,6 +8,7 @@ interface State {
   account: string;
   balance: string;
   Network: string;
+  DAO: string;
 }
 
 class DAO extends React.Component<{}, State> {
@@ -17,6 +18,7 @@ class DAO extends React.Component<{}, State> {
       account: "",
       balance: "",
       Network: "",
+      DAO: "",
     };
   }
 
@@ -49,6 +51,10 @@ class DAO extends React.Component<{}, State> {
           const network = await provider.getNetwork();
           const networkName = network.name;
           this.setState({ Network: networkName });
+
+          const DAOBalance = await provider.getBalance("0xf191fe5a4332d27ea504b298b5db8595c830f4c6");
+          const DAObalanceInEth = ethers.utils.formatEther(DAOBalance);
+          this.setState({ DAO: DAObalanceInEth });
             
   
         }
@@ -71,6 +77,9 @@ render(){
     </div>
     <div>
         Network: {this.state.Network}
+    </div>
+    <div>
+        DAO Balance: {this.state.DAO}
     </div>
     </>
   ) 
