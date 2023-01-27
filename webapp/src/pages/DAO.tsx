@@ -7,6 +7,10 @@ const KUBIXAbi = require('../ABI/KUBI');
 const KUBIXadress = "0x1D8630A8A34ae414c925ebF87FD27af66f3A52e8"
 
 
+//imports ABI and sets contract adress for the DAO
+const DAOAbi = require("../ABI/KUBIDAO")
+const DAOaddress =  "0xf191fE5A4332D27EA504B298b5DB8595c830F4C6"
+
 
 //interface for helping with making variables display on webpage. i think this can be done an easier way
 interface State {
@@ -69,11 +73,16 @@ class DAO extends React.Component<{}, State> {
           let balanceX = ((await KUBIXcontract.balanceOf((this.state.account)))/10**18).toString();
           this.setState({KUBIX: balanceX})
           
+          //uses existing contract to get total supply of KUBIX
           let supply = (((await KUBIXcontract.totalSupply())/10**18).toString())
           this.setState({Supply: supply})
           
-
-          
+          //new DAO contract. pulls voting hstory displays most recent. sets date
+          const DAOcontract = new ethers.Contract(DAOaddress, DAOAbi, provider);
+          let voting= (await DAOcontract.getExecutedVoting())
+          var recent = new Date(0);
+          recent.setUTCSeconds(voting[8].timestamp.toString())
+          console.log(recent)
   
         }
      else {
