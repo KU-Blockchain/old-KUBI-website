@@ -96,17 +96,18 @@ render(){
         Account: {this.state.account}
     </div>
     <div>
-        Balance: {this.state.balance ||0}
+        Network coin Balance: {this.state.balance ||0}
+    </div>
+    <div>
+        KUBIX Balance: {this.state.KUBIX || "switch to polygon network"}
     </div>
     <div>
         Network: {this.state.Network}
     </div>
     <div>
-        DAO Balance: {this.state.DAO}
+        Balance of the DAO: {this.state.DAO|| "switch to polygon network"}
     </div>
-    <div>
-        KUBIX Balance: {this.state.KUBIX}
-    </div>
+
   </>
   ) 
 };
