@@ -1,6 +1,11 @@
 import React from "react";
 import { ethers, Contract } from 'ethers';
-import KUBIABI from "../ABI/KUBI.json";
+
+
+const Abi = require('../ABI/KUBI');
+
+
+
 
 
 const KUBIXadress = "0x1D8630A8A34ae414c925ebF87FD27af66f3A52e8"
@@ -65,9 +70,10 @@ class DAO extends React.Component<{}, State> {
         
           
 
-          const contract = new Contract(KUBIXadress,KUBIABI, provider);
-          const KUBIbalance = await contract.balanceOf(this.state.account);
-          this.setState({ KUBIX: KUBIbalance });
+          const contract = new ethers.Contract(KUBIXadress, Abi, provider);
+          let balanceX = ((await contract.balanceOf((this.state.account)))/10**18).toString();
+          this.setState({KUBIX: balanceX})
+          
 
        
 
@@ -101,7 +107,7 @@ render(){
     <div>
         KUBIX Balance: {this.state.KUBIX}
     </div>
-    </>
+  </>
   ) 
 };
 }
