@@ -1,18 +1,13 @@
 import React from "react";
-import { ethers, Contract } from 'ethers';
+import { ethers} from 'ethers';
 
-
-const Abi = require('../ABI/KUBI');
-
-
-
-
-
+//imports ABI and sets contract adress for KUBIX coin
+const KUBIXAbi = require('../ABI/KUBI');
 const KUBIXadress = "0x1D8630A8A34ae414c925ebF87FD27af66f3A52e8"
 
 
 
-
+//interface for helping with making variables display on webpage. i think this can be done an easier way
 interface State {
   account: string;
   balance: string;
@@ -34,24 +29,20 @@ class DAO extends React.Component<{}, State> {
   }
 
   async componentDidMount() {
+    //checks if metamask is availibke
     if (window.ethereum) {
-      let provider = new ethers.providers.Web3Provider(
-        window.ethereum
-      );
-      window.ethereum
-        .request({method:'eth_requestAccounts'})
-        .then(async (res: any) => {
-          console.log(res);
 
+      //initalizes metamask provider
+      let provider = new ethers.providers.Web3Provider(window.ethereum);
+      window.ethereum.request({method:'eth_requestAccounts'}).then(async (res: any) => {
+          
+          //gets account addrss
           const address = res[0];
           this.setState({ account: address });
-          console.log(address)
-            
+
+          //gets balance of current network token
           const balance = await provider.getBalance(address);
           const balanceInEth = ethers.utils.formatEther(balance);
-          
-
-          console.log(balanceInEth);
           this.setState(prevState => ({
                 ...prevState,
                 balance: balanceInEth
@@ -59,26 +50,22 @@ class DAO extends React.Component<{}, State> {
             })
             .catch((err: any) => console.log(err));
           
+          // gets network account is on 
           const network = await provider.getNetwork();
           const networkName = network.name;
           this.setState({ Network: networkName });
 
+          // gets balance of matic from DAO treasury contract
           const DAOBalance = await provider.getBalance("0xf191fe5a4332d27ea504b298b5db8595c830f4c6");
           const DAObalanceInEth = ethers.utils.formatEther(DAOBalance);
           this.setState({ DAO: DAObalanceInEth });
           
         
-          
-
-          const contract = new ethers.Contract(KUBIXadress, Abi, provider);
+          // gets balance of KUBIX in current account
+          const contract = new ethers.Contract(KUBIXadress, KUBIXAbi, provider);
           let balanceX = ((await contract.balanceOf((this.state.account)))/10**18).toString();
           this.setState({KUBIX: balanceX})
           
-
-       
-
-
-            
   
         }
      else {
@@ -99,13 +86,13 @@ render(){
         Network coin Balance: {this.state.balance ||0}
     </div>
     <div>
-        KUBIX Balance: {this.state.KUBIX || "switch to polygon network"}
+        KUBIX Balance: {this.state.KUBIX || " switch to polygon network"}
     </div>
     <div>
         Network: {this.state.Network}
     </div>
     <div>
-        Balance of the DAO: {this.state.DAO|| "switch to polygon network"}
+        Balance of the DAO: {this.state.DAO|| " switch to polygon network"}
     </div>
 
   </>
