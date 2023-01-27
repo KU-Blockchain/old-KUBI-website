@@ -41,7 +41,7 @@ interface CardProps {
 function Card({ image, title, category }: CardProps) {
   const { classes } = useStyles();
 
-  return (
+  return(
     <Paper
       shadow="md"
       p="xl"

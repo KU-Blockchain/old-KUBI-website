@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import { ethers} from 'ethers';
 
@@ -14,6 +15,7 @@ interface State {
   Network: string;
   DAO: string;
   KUBIX: string;
+  Supply: string;
 }
 
 class DAO extends React.Component<{}, State> {
@@ -25,6 +27,7 @@ class DAO extends React.Component<{}, State> {
       Network: "",
       DAO: "",
       KUBIX: "",
+      Supply: "",
     };
   }
 
@@ -62,9 +65,14 @@ class DAO extends React.Component<{}, State> {
           
         
           // gets balance of KUBIX in current account
-          const contract = new ethers.Contract(KUBIXadress, KUBIXAbi, provider);
-          let balanceX = ((await contract.balanceOf((this.state.account)))/10**18).toString();
+          const KUBIXcontract = new ethers.Contract(KUBIXadress, KUBIXAbi, provider); //makes contract
+          let balanceX = ((await KUBIXcontract.balanceOf((this.state.account)))/10**18).toString();
           this.setState({KUBIX: balanceX})
+          
+          let supply = (((await KUBIXcontract.totalSupply())/10**18).toString())
+          this.setState({Supply: supply})
+          
+
           
   
         }
@@ -76,11 +84,15 @@ class DAO extends React.Component<{}, State> {
 render(){
   return(
   <>
+    
     <div>
       DAO test
     </div>
     <div>
         Account: {this.state.account}
+    </div>
+    <div>
+        Network: {this.state.Network}
     </div>
     <div>
         Network coin Balance: {this.state.balance ||0}
@@ -89,11 +101,13 @@ render(){
         KUBIX Balance: {this.state.KUBIX || " switch to polygon network"}
     </div>
     <div>
-        Network: {this.state.Network}
+        Total KUBIX Supply: {this.state.Supply|| " switch to polygon network"}
     </div>
+
     <div>
-        Balance of the DAO: {this.state.DAO|| " switch to polygon network"}
+        Balance of the DAO: {this.state.DAO || " switch to polygon network"}
     </div>
+
 
   </>
   ) 

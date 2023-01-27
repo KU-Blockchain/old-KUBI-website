@@ -1,7 +1,7 @@
 import React from "react";
 import { MantineProvider } from "@mantine/core";
 import { HeaderSimple } from "../components/header";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import DAO from "./DAO";
 import Home from "./Home";
 import About from "./About";

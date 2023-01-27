@@ -16,6 +16,7 @@
     "@types/react": "^18.0.26",
     "@walletconnect/web3-provider": "^1.8.0",
     "awesome-typescript-loader": "^5.2.1",
+    "dayjs": "^1.11.7",
     "embla-carousel-react": "^7.0.5",
     "ethers": "^5.7.2",
     "fs": "^0.0.1-security",
