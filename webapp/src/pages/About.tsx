@@ -4,7 +4,7 @@ import { BioCard } from "../components/bioCard";
 import jayhawk from "./jayhawk-4.png";
 
 const bios = {
-  emma: "this is emma's bio",
+  emma: "Emma Nasseri is a Junior majoring in Computer Science and minoring in Visual Arts. She has been involved with the KU Blockchain Institute since 2021 and is so grateful for the learning opportunities and welcoming community that KUBI has offered. Emma is hopeful about a decentralized future and is specifically interested in DAOs and NFTs. She believes blockchain has the power to make technology more just and equitable for all. ",
   hudson: "this is hudson's bio",
   johnathon: "this is johnathon's bio",
   hannah: "this is hannah's bio",
@@ -35,6 +35,7 @@ const About = () => {
             email={"email"}
             job={"Faculty Sponsor"}
             bioText={bios.perry}
+            contactMethod={"Connect"}
           ></BioCard>
           <BioCard
             avatar={jayhawk}
@@ -42,6 +43,7 @@ const About = () => {
             email={"eemail"}
             job={"Faculty Sponsor"}
             bioText={bios.jennifer}
+            contactMethod={"Connect"}
           ></BioCard>
           <BioCard
             avatar={jayhawk}
@@ -49,6 +51,7 @@ const About = () => {
             email={"enasseri02@ku.edu"}
             job={"President"}
             bioText={bios.emma}
+            contactMethod={"Connect"}
           ></BioCard>
         </Group>
         <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
@@ -59,6 +62,7 @@ const About = () => {
             email={"email address"}
             job={"Vice President of Business"}
             bioText={bios.johnathon}
+            contactMethod={"Connect"}
           ></BioCard>
           <BioCard
             avatar={"avatar"}
@@ -66,6 +70,7 @@ const About = () => {
             email={"hudsonh@ku.edu"}
             job={"Vice President of Engineering"}
             bioText={bios.hudson}
+            contactMethod={"Connect"}
           ></BioCard>
           <BioCard
             avatar={"avatar"}
@@ -73,6 +78,7 @@ const About = () => {
             email={"email address"}
             job={"Director of Education"}
             bioText={bios.hannah}
+            contactMethod={"Connect"}
           ></BioCard>
         </Group>
         <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
@@ -82,6 +88,7 @@ const About = () => {
             email={"email address"}
             job={"Executive Intern"}
             bioText={bios.bisshoy}
+            contactMethod={"Connect"}
           ></BioCard>
           <BioCard
             avatar={"avatar"}
@@ -89,6 +96,7 @@ const About = () => {
             email={"email address"}
             job={"Director of Research and Education"}
             bioText={bios.payden}
+            contactMethod={"Connect"}
           ></BioCard>
           <BioCard
             avatar={"avatar"}
@@ -96,6 +104,7 @@ const About = () => {
             email={"email address"}
             job={"Director of Content Creation"}
             bioText={bios.keanen}
+            contactMethod={"Connect"}
           ></BioCard>
         </Group>
       </div>

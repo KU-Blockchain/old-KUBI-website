@@ -7,6 +7,7 @@ interface IbioCardProps {
   email: string;
   job: string;
   bioText: string;
+  contactMethod: string;
 }
 
 export const BioCard: React.FC<IbioCardProps> = (props: IbioCardProps) => {
@@ -30,18 +31,20 @@ export const BioCard: React.FC<IbioCardProps> = (props: IbioCardProps) => {
             {props.job} • {props.email}
           </Text>
 
-          <Button variant="default" fullWidth mt="md">
-            Send message
+          <Button
+            variant="default"
+            fullWidth
+            mt="md"
+            component="a"
+            href={"https://www.linkedin.com/in/emma-nasseri/"}
+          >
+            {props.contactMethod}
           </Button>
-
-          
         </Paper>
       </HoverCard.Target>
       <HoverCard.Dropdown>
-          <Text size="sm">
-            {props.bioText}
-          </Text>
-        </HoverCard.Dropdown>
+        <Text size="sm">{props.bioText}</Text>
+      </HoverCard.Dropdown>
     </HoverCard>
   );
 };
