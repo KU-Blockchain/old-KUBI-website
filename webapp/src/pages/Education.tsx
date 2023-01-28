@@ -6,7 +6,7 @@ import { ActionsGrid } from "../components/actionsGrid";
 const Education = () => {
   return (
     <>
-
+        <div style={{marginTop: 40}}></div>
         <ActionsGrid/>
 
       

@@ -23,6 +23,7 @@
     "embla-carousel-react": "^7.0.5",
     "ethers": "^5.7.2",
     "event-calendar": "^0.8.1",
+    "framer-motion": "^8.5.4",
     "google-api-client": "^2.1.0",
     "google-maps-react": "^2.0.6",
     "googleapis": "^110.0.0",
