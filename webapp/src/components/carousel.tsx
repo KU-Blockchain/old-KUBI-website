@@ -13,6 +13,8 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'flex-start',
     backgroundSize: "cover",
     backgroundPosition: 'center',
+    marginLeft: 100,
+    marginRight: 100
   },
 
   title: {
@@ -114,8 +116,8 @@ export function CardsCarousel() {
 
   return (
     <Carousel
-      slideSize="50%"
-      breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
+      slideSize="100%"
+      breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 10 }]}
       slideGap="xl"
       align="start"
       slidesToScroll={mobile ? 1 : 2}
