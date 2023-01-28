@@ -2,6 +2,7 @@
 import React from "react";
 import { ethers} from 'ethers';
 
+
 //imports ABI and sets contract adress for KUBIX coin
 const KUBIXAbi = require('../ABI/KUBI');
 const KUBIXadress = "0x1D8630A8A34ae414c925ebF87FD27af66f3A52e8"
@@ -83,7 +84,9 @@ class DAO extends React.Component<{}, State> {
           var recent = new Date(0);
           recent.setUTCSeconds(voting[8].timestamp.toString())
           console.log(recent)
-  
+          
+
+          //set up smart contract integration on here
         }
      else {
       alert("Web3 provider not found. Refresh with Metamask");
@@ -112,9 +115,15 @@ render(){
     <div>
         Total KUBIX Supply: {this.state.Supply|| " switch to polygon network"}
     </div>
-
     <div>
-        Balance of the DAO: {this.state.DAO || " switch to polygon network"}
+    Balance of the DAO: {this.state.DAO || " switch to polygon network"}
+    </div>
+    <div> 
+        <a href= "/DAO/deploy">
+          <button>
+            Deploy
+          </button>
+        </a>
     </div>
 
 
