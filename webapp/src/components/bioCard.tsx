@@ -21,11 +21,11 @@ export const BioCard: React.FC<IbioCardProps> = (props: IbioCardProps) =>{
       })}
     >
       <Avatar src={props.avatar} size={120} radius={120} mx="auto" />
-      <Text align="center" size="lg" weight={500} mt="md">
+      <Text align="center" size="lg" weight={700} mt="md">
         {props.name} 
       </Text>
-      <Text align="center" color="dimmed" size="sm">
-        {props.email} • {props.job}
+      <Text align="center"  size="sm">
+        {props.job} • {props.email}
       </Text>
 
       <Button variant="default" fullWidth mt="md">

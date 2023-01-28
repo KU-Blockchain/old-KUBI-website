@@ -11,8 +11,8 @@ const Home = () => {
         <img src={jayhawk} alt="" width="500" height="500" />
         <div>About us section</div>
       </Group>
-      
       <CardsCarousel />
+      
     </>
   );
 };
