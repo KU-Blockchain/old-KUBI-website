@@ -28,6 +28,11 @@ const About = () => {
         <Text align="center" size="xl" weight={700} mt="md">
           Meet the Team
         </Text>
+        /*
+        These are the bio cards for the team. The group components define how they are grouped into rows.
+        Each BioCard component is being passed the appropriate props. 
+        
+        */
         <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
           <BioCard
             avatar={jayhawk}
@@ -35,7 +40,7 @@ const About = () => {
             email={"email"}
             job={"Faculty Sponsor"}
             bioText={bios.perry}
-            contactMethod={"Connect"}
+            contactMethod={"Personal Website"}
           ></BioCard>
           <BioCard
             avatar={jayhawk}
@@ -43,7 +48,7 @@ const About = () => {
             email={"eemail"}
             job={"Faculty Sponsor"}
             bioText={bios.jennifer}
-            contactMethod={"Connect"}
+            contactMethod={"Personal Website"}
           ></BioCard>
           <BioCard
             avatar={jayhawk}

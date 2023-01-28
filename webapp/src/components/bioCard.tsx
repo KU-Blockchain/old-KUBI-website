@@ -12,6 +12,10 @@ interface IbioCardProps {
 
 export const BioCard: React.FC<IbioCardProps> = (props: IbioCardProps) => {
   return (
+    /*
+    The HoverCard component defines the functionality that when a mouse hovers over the BioCard, a block of text appears.
+    HoverCard.Target displays what the target hover area is. In this case, it's the Paper component. 
+    */
     <HoverCard>
       <HoverCard.Target>
         <Paper
@@ -48,24 +52,3 @@ export const BioCard: React.FC<IbioCardProps> = (props: IbioCardProps) => {
     </HoverCard>
   );
 };
-
-/*<Box
-sx={{
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  width: 60,
-  height: 60,
-  borderRadius: 8,
-  borderWidth: 1,
-  borderColor: "#dee2e6",
-  borderStyle: "solid",
-  backgroundColor: "#fff",
-  cursor: "pointer",
-}}
->
-<Text size="sm" weight="bold">
-  bio text
-</Text>
-</Box>
-*/
