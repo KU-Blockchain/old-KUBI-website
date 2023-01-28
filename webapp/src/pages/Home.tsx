@@ -19,6 +19,9 @@ const Home = () => {
         </Paper>
       </Group>
       <CardsCarousel />
+      <div>
+        putting something here for a test
+      </div>
     </>
   );
 };

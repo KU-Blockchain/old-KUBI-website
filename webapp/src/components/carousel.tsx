@@ -120,7 +120,7 @@ export function CardsCarousel() {
       breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 10 }]}
       slideGap="xl"
       align="start"
-      slidesToScroll={mobile ? 1 : 2}
+      slidesToScroll={mobile ? 1 : 1}
     >
       {slides}
     </Carousel>
