@@ -13,6 +13,9 @@ interface IproductCardProps {
 const useStyles = createStyles((theme) => ({
   card: {
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+    border: `3px solid ${
+        theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
+      }`,
   },
 
   imageSection: {
@@ -36,7 +39,7 @@ const useStyles = createStyles((theme) => ({
 
   section: {
     padding: theme.spacing.md,
-    borderTop: `1px solid ${
+    borderTop: `2px solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
   },
@@ -64,7 +67,7 @@ export const ProductCard: React.FC<IproductCardProps> = (props: IproductCardProp
   ));
 
   return (
-    <Card withBorder radius="md" className={classes.card} style={{margin: 50, width: 200}}>
+    <Card withBorder radius="md" className={classes.card} style={{margin: 30, width: 200}}>
       <Card.Section className={classes.imageSection}>
         <div style={{ width: 180 }}>
         <Image src={props.frontImage} alt="product image"  />
