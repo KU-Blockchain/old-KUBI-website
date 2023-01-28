@@ -6,14 +6,20 @@ import DAO from "./DAO";
 import Home from "./Home";
 import About from "./About";
 import Events from "./Events";
+import Education from "./Education";
 import theme from "./theme";
 import Deploy from "./deploy";
+
 
 const link = [
   { link: "/", label: "Home" },
   { link: "/about", label: "About" },
   { link: "/events", label: "Events"},
+
   { link: "/DAO", label: "DAO" },
+
+  { link: "/education", label: "Education"},
+
 ];
 function App() {
   return (
@@ -24,7 +30,11 @@ function App() {
         <Route path="/DAO" element={<DAO />} />
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
+
         <Route path="/DAO/deploy" element={<Deploy />} />
+
+        <Route path="/education" element={<Education />}/>
+
       </Routes>
     </MantineProvider>
   );
