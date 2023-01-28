@@ -7,13 +7,15 @@ import lock  from "../artifacts/contracts/Lockf/Lock.json"
 
 
 interface State{
-  test: string;
+  deployAddress: string;
+  unlockTime: Date;
 }
 class deploy extends React.Component<{}, State> {
   constructor(props: {}) {
     super(props);
     this.state = {
-      test: "",
+      deployAddress: "",
+      unlockTime: new Date(0)
     };
   }
 
@@ -40,6 +42,11 @@ if (window.ethereum) {
 
       
         console.log(`Lock with .001 MATIC and unlock timestamp ${unlockTime} deployed to ${Testcontract.address}`);
+        this.setState({deployAddress: Testcontract.address});
+
+        var date = new Date(0);
+        date.setUTCSeconds(unlockTime)
+        this.setState({unlockTime: date})
     
       });
   }else{
@@ -53,8 +60,11 @@ render(){
   return (
     <>
       <div>
-        Deploy
-      </div> 
+        Deployed at address: {this.state.deployAddress|| " loading..."} 
+      </div>
+      <div>
+        Can unlock at: {(this.state.unlockTime).toDateString()|| " loading..."}
+      </div>
     </>
   );
 };
