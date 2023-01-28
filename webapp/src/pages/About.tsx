@@ -2,6 +2,7 @@ import * as React from "react";
 import { Group, Text } from "@mantine/core";
 import { BioCard } from "../components/bioCard";
 import jayhawk from "./jayhawk-4.png";
+import { ContactUs } from "../components/contactUs";
 
 const bios = {
   emma: "Emma Nasseri is a Junior majoring in Computer Science and minoring in Visual Arts. She has been involved with the KU Blockchain Institute since 2021 and is so grateful for the learning opportunities and welcoming community that KUBI has offered. Emma is hopeful about a decentralized future and is specifically interested in DAOs and NFTs. She believes blockchain has the power to make technology more just and equitable for all. ",
@@ -17,6 +18,11 @@ const bios = {
 
 const About = () => {
   return (
+    /*
+        These are the bio cards for the team. The group components define how they are grouped into rows.
+        Each BioCard component is being passed the appropriate props. 
+
+        */
     <>
       <div
         style={{
@@ -28,11 +34,7 @@ const About = () => {
         <Text align="center" size="xl" weight={700} mt="md">
           Meet the Team
         </Text>
-        /*
-        These are the bio cards for the team. The group components define how they are grouped into rows.
-        Each BioCard component is being passed the appropriate props. 
-        
-        */
+      
         <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
           <BioCard
             avatar={jayhawk}
@@ -112,6 +114,11 @@ const About = () => {
             contactMethod={"Connect"}
           ></BioCard>
         </Group>
+
+        <div style={{marginTop:50}}></div>
+
+        <ContactUs/>
+        
       </div>
     </>
   );

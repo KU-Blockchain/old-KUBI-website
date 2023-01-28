@@ -7,6 +7,7 @@
     "@mantine/carousel": "^5.10.0",
     "@mantine/core": "^5.10.0",
     "@mantine/ds": "^5.10.0",
+    "@mantine/form": "^5.10.2",
     "@mantine/hooks": "^5.10.0",
     "@mantine/prism": "^5.10.0",
     "@mobiscroll/react-lite": "^4.10.9",
