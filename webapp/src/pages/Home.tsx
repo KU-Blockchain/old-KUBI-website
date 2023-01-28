@@ -12,7 +12,7 @@ const Home = () => {
         <img src={jayhawk} alt="" width="500" height="500" />
         <Paper shadow="xs" p="md">
           <Text size="xl" weight={700}>Who We Are</Text>
-          <Text>
+          <Text size="lg">
           The University of Kansas Blockchain Institute is a student-led technology initiative established under the Institute for Information Sciences (I2S). 
           We strive to make Lawrence the technology hub of the Midwest through the interdisciplinary research, education, and development of distributed ledger technologies at KU. 
           </Text>
