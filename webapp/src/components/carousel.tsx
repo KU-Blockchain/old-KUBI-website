@@ -3,6 +3,7 @@ import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
 import { createStyles, Paper, Text, Title, Button, useMantineTheme } from '@mantine/core';
 import perry from "./carouselImages/perry-alexander.jpg"
+import kuHomeGraphic from "./carouselImages/blockchain-ku-home-1.jpg"
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -84,7 +85,7 @@ const data = [
   },
   {
     image:
-      'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
+      kuHomeGraphic,
     title: 'Artcile about making KU a premiere blockchain university',
     category: 'Featured Article',
     link: "https://www.startlandnews.com/2022/03/ku-blockchain-institute-2/"
