@@ -47,7 +47,7 @@ const About = () => {
           <BioCard
             avatar={jayhawk}
             name={"Dr. Jennifer Lohoefener"}
-            email={"eemail"}
+            email={"email"}
             job={"Faculty Sponsor"}
             bioText={bios.jennifer}
             contactMethod={"Personal Website"}
