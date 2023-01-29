@@ -1,8 +1,9 @@
 import * as React from "react";
-import { Group, Text } from "@mantine/core";
+import { Group, Text, Grid } from "@mantine/core";
 import { BioCard } from "../components/bioCard";
 import jayhawk from "./jayhawk-4.png";
 import { ContactUs } from "../components/contactUs";
+import { SimpleCard } from "../components/simpleCard";
 
 const bios = {
   emma: "Emma Nasseri is a Junior majoring in Computer Science and minoring in Visual Arts. She has been involved with the KU Blockchain Institute since 2021 and is so grateful for the learning opportunities and welcoming community that KUBI has offered. Emma is hopeful about a decentralized future and is specifically interested in DAOs and NFTs. She believes blockchain has the power to make technology more just and equitable for all. ",
@@ -24,6 +25,26 @@ const About = () => {
 
         */
     <>
+    <div
+        style={{
+          flexDirection: "row",
+          marginLeft: 50,
+          marginRight: 50,
+        }}
+      >
+      <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
+        <SimpleCard
+          title={"About KU Blockchain Institute"}
+          image={jayhawk}
+          description={"Learn about our mission, team, and history."}
+        ></SimpleCard>
+         <SimpleCard
+          title={"About Blockchain Technology"}
+          image={jayhawk}
+          description={"Learn more about the technology that makes us tick."}
+        ></SimpleCard>
+      </Group>
+      </div>
       <div
         style={{
           flexDirection: "row",
@@ -34,7 +55,7 @@ const About = () => {
         <Text align="center" size="xl" weight={700} mt="md">
           Meet the Team
         </Text>
-      
+
         <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
           <BioCard
             avatar={jayhawk}
@@ -62,7 +83,6 @@ const About = () => {
           ></BioCard>
         </Group>
         <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
-    
           <BioCard
             avatar={"avatar"}
             name={"Johnathon Lemons"}
@@ -115,10 +135,9 @@ const About = () => {
           ></BioCard>
         </Group>
 
-        <div style={{marginTop:50}}></div>
+        <div style={{ marginTop: 50 }}></div>
 
-        <ContactUs/>
-        
+        <ContactUs />
       </div>
     </>
   );
