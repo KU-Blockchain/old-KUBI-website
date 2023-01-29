@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Group, Text, Grid } from "@mantine/core";
+import { Group, Title, Grid } from "@mantine/core";
 import { BioCard } from "../components/bioCard";
 import jayhawk from "./jayhawk-4.png";
 import { ContactUs } from "../components/contactUs";
@@ -34,7 +34,7 @@ const About = () => {
       >
       <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
         <SimpleCard
-          title={"About KU Blockchain Institute"}
+          title={"About the KU Blockchain Institute"}
           image={jayhawk}
           description={"Learn about our mission, team, and history."}
         ></SimpleCard>
@@ -48,13 +48,13 @@ const About = () => {
       <div
         style={{
           flexDirection: "row",
-          marginLeft: 50,
-          marginRight: 50,
+          marginLeft: 70,
+          marginRight: 70,
         }}
       >
-        <Text align="center" size="xl" weight={700} mt="md">
-          Meet the Team
-        </Text>
+        <Title align="center" order={3}>
+          Leadership Team
+        </Title>
 
         <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
           <BioCard

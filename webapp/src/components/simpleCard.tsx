@@ -1,4 +1,13 @@
-import { UnstyledButton, Card, Paper, Image, Text, Button, Group } from "@mantine/core";
+import {
+  UnstyledButton,
+  Card,
+  Paper,
+  Image,
+  Text,
+  Title,
+  Button,
+  Group,
+} from "@mantine/core";
 import { filterProps } from "framer-motion";
 import React from "react";
 
@@ -12,8 +21,7 @@ export const SimpleCard: React.FC<IcardProps> = (props: IcardProps) => {
   return (
     <UnstyledButton>
       <Paper
-      
-        radius="md"
+        radius="lg"
         withBorder
         p="lg"
         sx={(theme) => ({
@@ -21,15 +29,17 @@ export const SimpleCard: React.FC<IcardProps> = (props: IcardProps) => {
             theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.white,
         })}
       >
-        <Image src={props.image} height={160} alt="Image" />
-
-        <Text align="center" weight={500} size="xl">{props.title}</Text>
+        <div style={{ width: 240, marginLeft: "auto", marginRight: "auto" }}>
+          <Image src={props.image} alt="Image" />
+        </div>
+        <Title align="center"order={2}>
+          {props.title}
+        </Title>
 
         <Text size="md" align="center" color="dimmed">
           {props.description}
         </Text>
       </Paper>
-      </UnstyledButton>
-
+    </UnstyledButton>
   );
 };
