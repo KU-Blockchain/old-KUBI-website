@@ -7,7 +7,8 @@ import Home from "./Home";
 import About from "./About";
 import Events from "./Events";
 import theme from "./theme";
-import Deploy from "./deploy";
+import Deploy from "./DAO/deploy";
+import Lock from "./DAO/lock";
 
 const link = [
   { link: "/", label: "Home" },
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/DAO/deploy" element={<Deploy />} />
+        <Route path="/DAO/deploy/lock" element={<Lock />} />
       </Routes>
     </MantineProvider>
   );
