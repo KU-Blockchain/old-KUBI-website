@@ -2,7 +2,7 @@ import React from "react";
 import {ethers} from "ethers";
 
 
-import lock  from "../artifacts/contracts/Lockf/Lock.json"
+import lock  from "../ABI/Lock.json"
 
 
 
