@@ -21,5 +21,11 @@ The website will be able to integrate with the DAO, DeWork, Github, Discord, Not
 2. Always be sure you're working on a separate branch.
 3. Don't hesitate to ask for help! We are a team and we are here to help each other. 
 
+## DAO and Smart Contract  Development
+1. make sure hardhat is working by running npx hardhat compile
+2. should generate new folders cache nd artifacts in the webapp. these will be ignored by git
+3. IMPORTANT! if you compile a new or updated smart contract remember to move the new .json file from artificats into ABI folder under src
+
+
 
 Reach out to Emma, Hudson, or Payden with any questions.
