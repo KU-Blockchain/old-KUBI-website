@@ -84,7 +84,7 @@ export function ActionsGrid() {
         <Text style={{ marginTop: 5, marginBottom: 5 }}>
           Click any tile to learn more.
         </Text>
-        <SimpleGrid cols={3} mt="md">
+        <SimpleGrid cols={4} mt="md">
           {items}
         </SimpleGrid>
       </Card>
