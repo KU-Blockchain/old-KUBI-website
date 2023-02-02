@@ -15,11 +15,12 @@ interface IcardProps {
   title: string;
   image: string;
   description: string;
+  link: string;
 }
 
-export const SimpleCard: React.FC<IcardProps> = (props: IcardProps) => {
+export const ClickableCard: React.FC<IcardProps> = (props: IcardProps) => {
   return (
-    <UnstyledButton>
+    <UnstyledButton component="a" href={props.link}>
       <Paper
         radius="lg"
         withBorder

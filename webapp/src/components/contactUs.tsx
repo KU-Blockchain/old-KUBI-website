@@ -23,7 +23,6 @@ export function ContactUs() {
       <Title
         order={2}
         size="h1"
-        sx={(theme) => ({ fontFamily: `Greycliff CF, ${theme.fontFamily}` })}
         weight={900}
         align="center"
       >
