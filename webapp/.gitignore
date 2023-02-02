@@ -39,7 +39,6 @@ coverage.json
 typechain
 typechain-types
 
-# Hardhat files
 
 
 
@@ -50,8 +49,6 @@ coverage.json
 typechain
 typechain-types
 
-# Hardhat files
-
 
 
 node_modules
@@ -61,7 +58,4 @@ coverage.json
 typechain
 typechain-types
 
-# Hardhat files
-cache
-artifacts
 
