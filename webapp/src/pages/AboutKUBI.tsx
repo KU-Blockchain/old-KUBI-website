@@ -26,22 +26,7 @@ const AboutKUBI = () => {
 
         */
     <>
-      <div
-        style={{
-          flexDirection: "row",
-          marginLeft: 50,
-          marginRight: 50,
-        }}
-      >
-        <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
-          <ClickableCard
-            title={"About Blockchain Technology"}
-            image={jayhawk}
-            description={"Learn more about the technology that makes us tick."}
-            link={"/aboutBlockchain"}
-          ></ClickableCard>
-        </Group>
-      </div>
+      
       <div
         style={{
           flexDirection: "row",
@@ -144,6 +129,23 @@ const AboutKUBI = () => {
         <div style={{ marginTop: 50 }}></div>
 
         <ContactUs />
+      </div>
+
+      <div
+        style={{
+          flexDirection: "row",
+          marginLeft: 50,
+          marginRight: 50,
+        }}
+      >
+        <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
+          <ClickableCard
+            title={"About Blockchain Technology"}
+            image={jayhawk}
+            description={"Click to learn more about the technology that makes us tick."}
+            link={"/aboutBlockchain"}
+          ></ClickableCard>
+        </Group>
       </div>
     </>
   );

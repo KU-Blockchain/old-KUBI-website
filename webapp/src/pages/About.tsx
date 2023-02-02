@@ -28,13 +28,13 @@ const About = () => {
           <ClickableCard
             title={"About the KU Blockchain Institute"}
             image={jayhawk}
-            description={"Learn about our mission, team, and history."}
+            description={"Click to learn about our mission, team, and history."}
             link={"/aboutKUBI"}
           ></ClickableCard>
           <ClickableCard
             title={"About Blockchain Technology"}
             image={jayhawk}
-            description={"Learn more about the technology that makes us tick."}
+            description={"Click to learn more about the technology that makes us tick."}
             link={"/aboutBlockchain"}
           ></ClickableCard>
         </Group>

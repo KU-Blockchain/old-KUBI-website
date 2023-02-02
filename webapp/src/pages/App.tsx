@@ -6,7 +6,6 @@ import DAO from "./DAO";
 import Home from "./Home";
 import About from "./About";
 import Events from "./Events";
-import Education from "./Education";
 import StoreFront from "./StoreFront";
 import theme from "./theme";
 import Deploy from "./deploy";
@@ -18,7 +17,6 @@ const link = [
   { link: "/about", label: "About" },
   { link: "/events", label: "Events" },
   { link: "/DAO", label: "DAO" },
-  { link: "/education", label: "Education" },
   { link: "/storefront", label: "Storefront" },
 ];
 function App() {
@@ -39,7 +37,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/DAO/deploy" element={<Deploy />} />
-        <Route path="/education" element={<Education />} />
         <Route path="/storefront" element={<StoreFront />} />
         <Route path="/aboutBlockchain" element={<AboutBlockchain />} />
         <Route path="/aboutKUBI" element={<AboutKUBI />} />

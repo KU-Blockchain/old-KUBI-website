@@ -37,7 +37,7 @@ export const ClickableCard: React.FC<IcardProps> = (props: IcardProps) => {
           {props.title}
         </Title>
 
-        <Text size="md" align="center" color="dimmed">
+        <Text size="lg" align="center" color="dimmed">
           {props.description}
         </Text>
       </Paper>
