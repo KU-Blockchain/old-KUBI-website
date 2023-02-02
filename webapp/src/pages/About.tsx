@@ -1,9 +1,10 @@
 import * as React from "react";
-import { Group, Title, Grid } from "@mantine/core";
+import { Group, Title, Grid, Image } from "@mantine/core";
 import { BioCard } from "../components/bioCard";
 import jayhawk from "./jayhawk-4.png";
 import { ContactUs } from "../components/contactUs";
 import { SimpleCard } from "../components/simpleCard";
+import campusLineArt from "../components/reusableImages/campusLineArtEdited.png";
 
 const bios = {
   emma: "Emma Nasseri is a Junior majoring in Computer Science and minoring in Visual Arts. She has been involved with the KU Blockchain Institute since 2021 and is so grateful for the learning opportunities and welcoming community that KUBI has offered. Emma is hopeful about a decentralized future and is specifically interested in DAOs and NFTs. She believes blockchain has the power to make technology more just and equitable for all. ",
@@ -25,38 +26,47 @@ const About = () => {
 
         */
     <>
-    <div
+      <div
         style={{
           flexDirection: "row",
           marginLeft: 50,
           marginRight: 50,
         }}
       >
-      <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
-        <SimpleCard
-          title={"About the KU Blockchain Institute"}
-          image={jayhawk}
-          description={"Learn about our mission, team, and history."}
-        ></SimpleCard>
-         <SimpleCard
-          title={"About Blockchain Technology"}
-          image={jayhawk}
-          description={"Learn more about the technology that makes us tick."}
-        ></SimpleCard>
-      </Group>
+        <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
+          <SimpleCard
+            title={"About the KU Blockchain Institute"}
+            image={jayhawk}
+            description={"Learn about our mission, team, and history."}
+          ></SimpleCard>
+          <SimpleCard
+            title={"About Blockchain Technology"}
+            image={jayhawk}
+            description={"Learn more about the technology that makes us tick."}
+          ></SimpleCard>
+        </Group>
       </div>
       <div
         style={{
           flexDirection: "row",
           marginLeft: 70,
           marginRight: 70,
+          marginBottom: 70,
         }}
       >
-        <Title align="center" order={3}>
+        
+
+        <Image
+          style={{marginTop: 70, marginBottom: 70}}
+          radius="md"
+          src={campusLineArt}
+          alt="Random unsplash image"
+        ></Image>
+        <Title align="center" order={1}>
           Leadership Team
         </Title>
 
-        <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
+        <Group position="center" spacing="lg" grow style={{ marginTop: 50, marginLeft: 30, marginRight: 30 }}>
           <BioCard
             avatar={jayhawk}
             name={"Dr. Perry Alexander"}
@@ -82,7 +92,7 @@ const About = () => {
             contactMethod={"Connect"}
           ></BioCard>
         </Group>
-        <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
+        <Group position="center" spacing="lg" grow style={{ marginTop: 30, marginLeft: 30, marginRight: 30 }}>
           <BioCard
             avatar={"avatar"}
             name={"Johnathon Lemons"}
@@ -108,7 +118,7 @@ const About = () => {
             contactMethod={"Connect"}
           ></BioCard>
         </Group>
-        <Group position="center" spacing="lg" grow style={{ marginTop: 30 }}>
+        <Group position="center" spacing="lg" grow style={{ marginTop: 30, marginLeft: 30, marginRight: 30 }}>
           <BioCard
             avatar={"avatar"}
             name={"Bisshoy Bhattacharjee"}
