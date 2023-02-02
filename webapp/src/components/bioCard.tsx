@@ -19,8 +19,8 @@ export const BioCard: React.FC<IbioCardProps> = (props: IbioCardProps) => {
     <HoverCard>
       <HoverCard.Target>
         <Paper
-          radius="md"
-          withBorder
+          radius="sm"
+          
           p="lg"
           sx={(theme) => ({
             backgroundColor:

@@ -3,7 +3,7 @@ import {Group }from "@mantine/core";
 import { ActionsGrid } from "../components/actionsGrid";
   
 
-const Education = () => {
+const AboutBlockchain = () => {
   return (
     <>
         <div style={{marginTop: 40}}></div>
@@ -14,4 +14,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default AboutBlockchain;

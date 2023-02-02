@@ -12,15 +12,18 @@ import React from "react";
 import { IconCoin } from "@tabler/icons";
 
 const mockdata = [
-  { title: "Crypto", icon: IconCoin, color: "violet" },
-  { title: "Supply Chain", icon: IconCoin, color: "indigo" },
-  { title: "Art", icon: IconCoin, color: "blue" },
-  { title: "Education", icon: IconCoin, color: "green" },
-  { title: "Social Media", icon: IconCoin, color: "teal" },
-  { title: "Digital Identity", icon: IconCoin, color: "cyan" },
-  { title: "Voting", icon: IconCoin, color: "pink" },
-  { title: "Payments", icon: IconCoin, color: "red" },
-  { title: "Something else", icon: IconCoin, color: "orange" },
+  { title: "Crypto", icon: IconCoin, color: "violet", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
+  { title: "Supply Chain", icon: IconCoin, color: "indigo", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
+  { title: "Art", icon: IconCoin, color: "blue", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
+  { title: "Education", icon: IconCoin, color: "green", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
+  { title: "Social Media", icon: IconCoin, color: "teal", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
+  { title: "Digital Identity", icon: IconCoin, color: "cyan", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
+  { title: "Voting", icon: IconCoin, color: "pink", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
+  { title: "Payments", icon: IconCoin, color: "red", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
+  { title: "Something else", icon: IconCoin, color: "orange", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
+  { title: "application", icon: IconCoin, color: "pink", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
+  { title: "application", icon: IconCoin, color: "red", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
+  { title: "The Environment", icon: IconCoin, color: "orange", link: "https://www.notion.so/Start-Here-266f5ea2b2ea4f5a990f869d52dfa6bc" },
 ];
 
 const useStyles = createStyles((theme) => ({
@@ -59,7 +62,7 @@ export function ActionsGrid() {
   const { classes, theme } = useStyles();
 
   const items = mockdata.map((item) => (
-    <UnstyledButton key={item.title} className={classes.item}>
+    <UnstyledButton key={item.title} className={classes.item} component="a" href={item.link}>
       <item.icon color={theme.colors[item.color][6]} size={32} />
       <Text size="sm" mt={7}>
         {item.title}

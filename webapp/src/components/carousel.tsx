@@ -2,11 +2,12 @@ import * as React from "react";
 import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
 import { createStyles, Paper, Text, Title, Button, useMantineTheme } from '@mantine/core';
-import perry from "./perry.jpg"
+import perry from "./carouselImages/perry-alexander.jpg"
+import kuHomeGraphic from "./carouselImages/blockchain-ku-home-1.jpg"
 
 const useStyles = createStyles((theme) => ({
   card: {
-    height: 440,
+    height: 600,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -38,9 +39,10 @@ interface CardProps {
   image: string;
   title: string;
   category: string;
+  link: string;
 }
 
-function Card({ image, title, category }: CardProps) {
+function Card({ image, title, category, link }: CardProps) {
   const { classes } = useStyles();
 
   return(
@@ -59,7 +61,7 @@ function Card({ image, title, category }: CardProps) {
           {title}
         </Title>
       </div>
-      <Button variant="white" color="dark">
+      <Button variant="white" color="dark" size="xl" component="a" href={link}>
         Read article
       </Button>
     </Paper>
@@ -70,39 +72,25 @@ const data = [
   {
     image:
       perry,
-    title: 'Perry Alexander',
-    category: 'Faculty',
+    title: 'On Campus with Dr. Perry Alexander',
+    category: 'Featured Article',
+    link: "https://ripple.com/insights/on-campus-university-of-kansas-emphasizes-interdisciplinary-blockchain-study-for-budding-entrepreneurs/"
   },
   {
     image:
       'https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Hawaii beaches review: better than you think',
-    category: 'beach',
+    title: 'Our Founders',
+    category: 'Featured Article',
+    link: "https://www.startlandnews.com/2020/02/startup-road-trip-ku-blockchain-institute/"
   },
   {
     image:
-      'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Mountains at night: 12 best locations to enjoy the view',
-    category: 'nature',
+      kuHomeGraphic,
+    title: 'Artcile about making KU a premiere blockchain university',
+    category: 'Featured Article',
+    link: "https://www.startlandnews.com/2022/03/ku-blockchain-institute-2/"
   },
-  {
-    image:
-      'https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Aurora in Norway: when to visit for best experience',
-    category: 'nature',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best places to visit this winter',
-    category: 'tourism',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Active volcanos reviews: travel at your own risk',
-    category: 'nature',
-  },
+  
 ];
 
 export function CardsCarousel() {
