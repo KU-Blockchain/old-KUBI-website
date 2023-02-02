@@ -1,4 +1,5 @@
 import React from "react";
+import { KUBITitle } from "../components/KUBITitle";
 import jayhawk from "./jayhawk-4.png";
 import { CardsCarousel } from "../components/carousel";
 import { Group, Text, Paper } from "@mantine/core";
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <>
       <div>i want to put a scrolling banner here</div>
+      <KUBITitle></KUBITitle>
       <Group>
         <img src={jayhawk} alt="" width="500" height="500" />
         <Paper shadow="xs" p="md">
