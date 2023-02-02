@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+import {Title } from "@mantine/core"
 
-export function KUBITitle() {
+
+
+export function KUBITitleAnimation() {
   const [text, setText] = useState("");
   const [fullText, setFullText] = useState(
     "Welcome to the official website of the University of Kansas Blockchain Institute."
@@ -15,5 +18,5 @@ export function KUBITitle() {
       }, 40);
     }
   }, [index]);
-  return <h2>{text}</h2>;
+  return <Title style={{font: "Courier"}}>{text}</Title>;
 }

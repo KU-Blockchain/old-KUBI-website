@@ -1,5 +1,5 @@
 import React from "react";
-import { KUBITitle } from "../components/KUBITitle";
+import { KUBITitleAnimation } from "../components/KUBITitleAnimation";
 import jayhawk from "./jayhawk-4.png";
 import { CardsCarousel } from "../components/carousel";
 import { Group, Text, Paper } from "@mantine/core";
@@ -8,9 +8,10 @@ import { motion, AnimatePresence } from "framer-motion";
 const Home = () => {
   return (
     <>
+      <KUBITitleAnimation></KUBITitleAnimation>
+
       <div>i want to put a scrolling banner here</div>
-      <KUBITitle></KUBITitle>
-      <Group>
+      <Group styles={{alignItems: "center", display: "flex"  }}>
         <img src={jayhawk} alt="" width="500" height="500" />
         <Paper shadow="xs" p="md">
           <Text size="xl" weight={700}>Who We Are</Text>
