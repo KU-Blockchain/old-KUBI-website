@@ -12,6 +12,8 @@ import theme from "./theme";
 
 import Deploy from "./DAO/deploy";
 import Lock from "./DAO/lock";
+
+import Calc from "./DAO/calc"
 import AboutKUBI from "./AboutKUBI";
 import AboutBlockchain from "./AboutBlockchain";
 
@@ -43,6 +45,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/DAO/deploy" element={<Deploy />} />
         <Route path="/DAO/deploy/lock" element={<Lock />} />
+        <Route path="/DAO/calculator" element={<Calc />} />
         <Route path="/storefront" element={<StoreFront />} />
         <Route path="/aboutBlockchain" element={<AboutBlockchain />} />
         <Route path="/aboutKUBI" element={<AboutKUBI />} />
