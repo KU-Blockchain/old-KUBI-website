@@ -125,6 +125,13 @@ render(){
           </button>
         </a>
     </div>
+    <div> 
+        <a href= "/DAO/calculator">
+          <button>
+            Calculator
+          </button>
+        </a>
+    </div>
 
 
   </>
