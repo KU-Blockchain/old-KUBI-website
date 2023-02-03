@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Group, Title, Grid, Image } from "@mantine/core";
-import { BioCard } from "../components/bioCard";
+import { BioCard } from "../../components/bioCard";
 import jayhawk from "./jayhawk-4.png";
-import { ContactUs } from "../components/contactUs";
-import campusLineArt from "../components/reusableImages/campusLineArtEdited.png";
-import { ClickableCard } from "../components/clickableCard";
+import { ContactUs } from "../../components/contactUs";
+import campusLineArt from "../../components/reusableImages/campusLineArtEdited.png";
+import { ClickableCard } from "../../components/clickableCard";
 
 const bios = {
   emma: "Emma Nasseri is a Junior majoring in Computer Science and minoring in Visual Arts. She has been involved with the KU Blockchain Institute since 2021 and is so grateful for the learning opportunities and welcoming community that KUBI has offered. Emma is hopeful about a decentralized future and is specifically interested in DAOs and NFTs. She believes blockchain has the power to make technology more just and equitable for all. ",

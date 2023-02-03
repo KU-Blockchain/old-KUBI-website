@@ -1,6 +1,6 @@
 import React from "react";
 import {Group }from "@mantine/core";
-import { ActionsGrid } from "../components/actionsGrid";
+import { ActionsGrid } from "../../components/actionsGrid";
   
 
 const AboutBlockchain = () => {
