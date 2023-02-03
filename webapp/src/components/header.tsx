@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createStyles, Header, Container, Group, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import logo from "./KUBC-logo.png"
+import logo from "./reusableImages/simpleWhiteLogo.png"
 import React from "react";
 import { Link } from 'react-router-dom'
 

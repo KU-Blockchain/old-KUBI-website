@@ -2,7 +2,7 @@ import React from "react";
 import { MantineProvider, Text } from "@mantine/core";
 import { HeaderSimple } from "../components/header";
 import { Routes, Route } from "react-router-dom";
-import DAO from "./DAO";
+import DAO from "./DAO/DAO";
 import Home from "./Home";
 import About from "./About/About";
 import Events from "./Events";
@@ -12,8 +12,10 @@ import theme from "./theme";
 
 import Deploy from "./DAO/deploy";
 import Lock from "./DAO/lock";
-import AboutKUBI from "./AboutKUBI";
-import AboutBlockchain from "./AboutBlockchain";
+
+import Calc from "./DAO/calc"
+import AboutKUBI from "./About/AboutKUBI";
+import AboutBlockchain from "./About/AboutBlockchain";
 
 
 
@@ -43,6 +45,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/DAO/deploy" element={<Deploy />} />
         <Route path="/DAO/deploy/lock" element={<Lock />} />
+        <Route path="/DAO/calculator" element={<Calc />} />
         <Route path="/storefront" element={<StoreFront />} />
         <Route path="/aboutBlockchain" element={<AboutBlockchain />} />
         <Route path="/aboutKUBI" element={<AboutKUBI />} />
