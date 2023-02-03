@@ -2,7 +2,7 @@ import * as React from "react";
 import { Group, Title, Grid, Image, UnstyledButton, Avatar, Text} from "@mantine/core";
 import jayhawk from "./jayhawk-4.png";
 import { Routes, Route } from "react-router-dom";
-import { ClickableCard } from "../components/clickableCard";
+import { ClickableCard } from "../../components/clickableCard";
 import AboutKUBI from "./AboutKUBI";
 import AboutBlockchain from "./AboutBlockchain";
 import campusLineArt from "../components/reusableImages/campusLineArtEdited.png";
