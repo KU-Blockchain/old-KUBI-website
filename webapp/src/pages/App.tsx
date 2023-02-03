@@ -2,7 +2,7 @@ import React from "react";
 import { MantineProvider, Text } from "@mantine/core";
 import { HeaderSimple } from "../components/header";
 import { Routes, Route } from "react-router-dom";
-import DAO from "./DAO";
+import DAO from "./DAO/DAO";
 import Home from "./Home";
 import About from "./About/About";
 import Events from "./Events";
@@ -14,8 +14,8 @@ import Deploy from "./DAO/deploy";
 import Lock from "./DAO/lock";
 
 import Calc from "./DAO/calc"
-import AboutKUBI from "./AboutKUBI";
-import AboutBlockchain from "./AboutBlockchain";
+import AboutKUBI from "./About/AboutKUBI";
+import AboutBlockchain from "./About/AboutBlockchain";
 
 
 
