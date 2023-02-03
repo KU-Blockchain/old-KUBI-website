@@ -2,7 +2,7 @@ import React from "react";
 import {ethers} from "ethers";
 
 
-import lock  from "../artifacts/contracts/Lockf/Lock.json"
+import lockT  from "../../ABI/Lock.json"
 
 
 
@@ -10,7 +10,7 @@ interface State{
   deployAddress: string;
   unlockTime: Date;
 }
-class deploy extends React.Component<{}, State> {
+class lock extends React.Component<{}, State> {
   constructor(props: {}) {
     super(props);
     this.state = {
@@ -35,7 +35,7 @@ if (window.ethereum) {
       
       
 
-        const LockT = new ethers.ContractFactory(lock.abi,lock.bytecode, signer );
+        const LockT = new ethers.ContractFactory(lockT.abi,lockT.bytecode, signer );
         const Testcontract = await LockT.deploy(unlockTime, { value: lockedAmount })
       
         await Testcontract.deployed();
@@ -70,4 +70,4 @@ render(){
 };
 }
 
-export default deploy;
+export default lock;

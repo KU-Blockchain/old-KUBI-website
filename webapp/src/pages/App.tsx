@@ -8,9 +8,14 @@ import About from "./About/About";
 import Events from "./Events";
 import StoreFront from "./StoreFront/StoreFront";
 import theme from "./theme";
-import Deploy from "./deploy";
-import AboutKUBI from "./About/AboutKUBI";
-import AboutBlockchain from "./About/AboutBlockchain";
+
+
+import Deploy from "./DAO/deploy";
+import Lock from "./DAO/lock";
+import AboutKUBI from "./AboutKUBI";
+import AboutBlockchain from "./AboutBlockchain";
+
+
 
 const link = [
   { link: "/", label: "Home" },
@@ -37,6 +42,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/DAO/deploy" element={<Deploy />} />
+        <Route path="/DAO/deploy/lock" element={<Lock />} />
         <Route path="/storefront" element={<StoreFront />} />
         <Route path="/aboutBlockchain" element={<AboutBlockchain />} />
         <Route path="/aboutKUBI" element={<AboutKUBI />} />
