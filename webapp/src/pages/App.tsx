@@ -4,17 +4,19 @@ import { HeaderSimple } from "../components/header";
 import { Routes, Route } from "react-router-dom";
 import DAO from "./DAO";
 import Home from "./Home";
-import About from "./About";
+import About from "./About/About";
 import Events from "./Events";
-import StoreFront from "./StoreFront";
+import StoreFront from "./StoreFront/StoreFront";
 import theme from "./theme";
+
 
 import Deploy from "./DAO/deploy";
 import Lock from "./DAO/lock";
-import Calc from "./DAO/calc"
 
+import Calc from "./DAO/calc"
 import AboutKUBI from "./AboutKUBI";
 import AboutBlockchain from "./AboutBlockchain";
+
 
 
 const link = [
