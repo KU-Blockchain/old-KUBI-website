@@ -4,19 +4,19 @@ import {ethers} from "ethers";
 
 import Mint from "./NFTmetadata/testNFT.json"
 import myNFT from "./ABI/NFT.json"
+import { LoadingOverlay } from "@mantine/core";
 
 
 
 interface State{
-  deployAddress: string;
-  unlockTime: Date;
+  txnHash: string;
+  
 }
 class mint extends React.Component<{}, State> {
   constructor(props: {}) {
     super(props);
     this.state = {
-      deployAddress: "",
-      unlockTime: new Date(0)
+      txnHash: "",
     };
   }
 
@@ -37,6 +37,7 @@ if (window.ethereum) {
 
         let nftTxn = await NFTcontract.mintNFT(address, tokenURI)
         await nftTxn.wait()
+        this.setState({txnHash: nftTxn.hash })
         console.log(`NFT Minted! Check it out at: https://polygonscan.com/tx/${nftTxn.hash}`)
 
 
@@ -54,7 +55,7 @@ render(){
   return (
     <>
       <div>
-        Deployed at address: {this.state.deployAddress|| " loading..."} 
+        NFT Minted! Check it out at: https://polygonscan.com/tx/{this.state.txnHash || "loading..."}
       </div>
       <div>
       </div>
