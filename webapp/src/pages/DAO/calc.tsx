@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React from "react";
+import { TextInput } from '@mantine/core';
 
 
 interface State{
@@ -17,6 +18,16 @@ class Calculator extends React.Component<{},State>{
           totalKUBIX: "",
         };
       }
+
+    handleChange(value:  string, type: string){
+        if (type == "difficulty"){
+            this.setState({difficulty: value });
+        }
+        
+
+    }
+
+    
     calcKUBIX(){
         // eslint-disable-next-line @typescript-eslint/no-this-alias
         let multiplier =  0;
@@ -46,8 +57,6 @@ class Calculator extends React.Component<{},State>{
         }
     }
 
-  
-
 
 
 render() {
@@ -55,8 +64,29 @@ render() {
     
   return  (
     <>
+    <div>
+    <TextInput
+      placeholder="easy, medium, hard, or very hard"
+      label="Difficulty"
+      value ={this.state.difficulty}
+      onChange= {(event) => this.handleChange((event.currentTarget.value),"difficulty")}
+      withAsterisk
+    />
+
+    <TextInput
+      placeholder="Round up to whole hour"
+      label="Estimated Hours"
+      value ={this.state.time}
+      withAsterisk
+    />
+   
+
+    </div>
+    <div>
+
+    </div>
     <div> 
-        Calculator: {this.state.totalKUBIX}
+        answer: {this.state.totalKUBIX}
     </div>
     </>
   );
