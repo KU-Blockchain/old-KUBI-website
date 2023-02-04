@@ -14,6 +14,13 @@ function deploy() {
           </button>
         </a>
     </div>
+    <div> 
+        <a href= "/DAO/deploy/NFT">
+          <button>
+            NFT Contract
+          </button>
+        </a>
+    </div>
     </>
   );
 };
