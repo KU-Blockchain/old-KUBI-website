@@ -31,8 +31,9 @@ if (window.ethereum) {
         let provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
 
-        const NFTaddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-        const NFTcontract = new ethers.Contract(NFTaddress,myNFT.abi , provider);
+        const NFTaddress = "0x2B55E639d3191441651543D3A6b31e3FF0304b96"
+        const NFTcontract = new ethers.Contract(NFTaddress,myNFT.abi , signer);
+        console.log("check")
 
         let nftTxn = await NFTcontract.mintNFT(address, tokenURI)
         await nftTxn.wait()
