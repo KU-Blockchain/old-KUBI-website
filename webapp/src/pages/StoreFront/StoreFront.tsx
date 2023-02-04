@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Group, Text, SimpleGrid, Container } from "@mantine/core";
+import { Group, Text, SimpleGrid, Container, Button } from "@mantine/core";
 import blackTee from "./merchImages/BlackTee.png";
 import colorfulTee from "./merchImages/ColorfulTee.png";
 import waterBottle from "./merchImages/WaterBottle.png";
@@ -23,11 +23,10 @@ const StoreFront = () => {
           marginRight: 50,
         }}
       >
-        <div style={{marginBottom:30}}>
-        <Text align="center" size="xl" weight={700} mt="md">
-          Redeem Your KUBIX
-        </Text>
-        </div>
+        <Group  position="center" style={{marginBottom:30}}>
+      
+        <Button component="a" href= "/DAO/deploy">Click here to connect metamask</Button>
+        </Group>
         <SimpleGrid cols={2}>
           <Container>
             <Group>
