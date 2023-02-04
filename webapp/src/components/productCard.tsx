@@ -8,6 +8,7 @@ interface IproductCardProps {
     title: string;
     price: string;
     year: string;
+    status: string; //In Stock or Out of Stock
 }
 
 const useStyles = createStyles((theme) => ({
@@ -59,13 +60,13 @@ const mockdata = [
 
 export const ProductCard: React.FC<IproductCardProps> = (props: IproductCardProps) =>{
   const { classes } = useStyles();
-  const features = mockdata.map((feature) => (
+  /*const features = mockdata.map((feature) => (
     <Center key={feature.label}>
       <feature.icon size={18} className={classes.icon} stroke={1.5} />
       <Text size="xs">{feature.label}</Text>
     </Center>
   ));
-
+*/
   return (
     <Card withBorder radius="md" className={classes.card} style={{margin: 30, width: 200}}>
       <Card.Section className={classes.imageSection}>
@@ -81,19 +82,9 @@ export const ProductCard: React.FC<IproductCardProps> = (props: IproductCardProp
             {props.year}
           </Text>
         </div>
-        <Badge variant="outline">25% off</Badge>
+        <Badge variant="outline">{props.status}</Badge>
       </Group>
-
-      <Card.Section className={classes.section} mt="md">
-        <Text size="sm" color="dimmed" className={classes.label}>
-          Basic configuration
-        </Text>
-
-        <Group spacing={8} mb={-8}>
-          {features}
-        </Group>
-      </Card.Section>
-
+      
       <Card.Section className={classes.section}>
         <Group spacing={30}>
           <div>

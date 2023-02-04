@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Group, Text, Grid, Container } from "@mantine/core";
+import { Group, Text, SimpleGrid, Container } from "@mantine/core";
 import blackTee from "./merchImages/BlackTee.png";
 import colorfulTee from "./merchImages/ColorfulTee.png";
 import waterBottle from "./merchImages/WaterBottle.png";
@@ -26,41 +26,44 @@ const StoreFront = () => {
         <Text align="center" size="xl" weight={700} mt="md">
           Redeem Your KUBIX
         </Text>
-        <Grid>
-          <Grid>
-            
+        <SimpleGrid cols={2}>
+          <Container>
+            <Group>
               <ProductCard
                 frontImage={blackTee}
                 title={"Black Tee"}
                 price={"20,000 KUBIX"}
                 year={"2022"}
+                status={"In Stock"}
               ></ProductCard>
               <ProductCard
                 frontImage={colorfulTee}
                 title={"White Tee"}
                 price={"20,000 KUBIX"}
                 year={"2022"}
+                status={"In Stock"}
               ></ProductCard>
-            
-            
+            </Group>
+            <Group>
               <ProductCard
-                frontImage={waterBottle}
-                title={"Waterbottle"}
+                frontImage={blackTee}
+                title={"Black Tee"}
                 price={"20,000 KUBIX"}
                 year={"2022"}
+                status={"In Stock"}
               ></ProductCard>
               <ProductCard
-                frontImage={crewNeck}
-                title={"Classic White Crewneck"}
+                frontImage={colorfulTee}
+                title={"White Tee"}
                 price={"20,000 KUBIX"}
                 year={"2022"}
+                status={"In Stock"}
               ></ProductCard>
-            
-          </Grid>
-          <Container>
-            <FaqSimple></FaqSimple>
+            </Group>
           </Container>
-        </Grid>
+
+          <FaqSimple></FaqSimple>
+        </SimpleGrid>
       </div>
     </>
   );
