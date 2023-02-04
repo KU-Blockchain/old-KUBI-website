@@ -12,13 +12,11 @@
     "@mantine/form": "^5.10.2",
     "@mantine/hooks": "^5.10.0",
     "@mantine/prism": "^5.10.0",
-
+    "@mobiscroll/react-lite": "^4.10.9",
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.5",
     "@nomiclabs/hardhat-ethers": "^2.2.2",
     "@nomiclabs/hardhat-etherscan": "^3.1.5",
-
-    "@mobiscroll/react-lite": "^4.10.9",
-
+    "@openzeppelin/contracts": "^4.8.1",
     "@tabler/icons": "^1.119.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -29,23 +27,18 @@
     "@types/react-big-calendar": "^0.38.3",
     "@walletconnect/web3-provider": "^1.8.0",
     "awesome-typescript-loader": "^5.2.1",
-
+    "axios": "^1.2.4",
     "chai": "^4.3.7",
     "dayjs": "^1.11.7",
     "embla-carousel-react": "^7.0.5",
     "ethers": "^5.7.2",
-    "fs": "^0.0.1-security",
-    "hardhat-gas-reporter": "^1.0.9",
-
-    "axios": "^1.2.4",
-    "embla-carousel-react": "^7.0.5",
-    "ethers": "^5.7.2",
     "event-calendar": "^0.8.1",
     "framer-motion": "^8.5.4",
+    "fs": "^0.0.1-security",
     "google-api-client": "^2.1.0",
     "google-maps-react": "^2.0.6",
     "googleapis": "^110.0.0",
-
+    "hardhat-gas-reporter": "^1.0.9",
     "history": "^5.3.0",
     "mobiscroll": "^3.0.0-beta6",
     "react": "^18.2.0",
@@ -90,7 +83,6 @@
     "path": false,
     "os": false
   },
-  
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.1",
     "hardhat": "^2.12.6",
