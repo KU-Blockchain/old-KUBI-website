@@ -4,12 +4,12 @@ import { ethers} from 'ethers';
 
 
 //imports ABI and sets contract adress for KUBIX coin
-const KUBIXAbi = require('../../ABI/KUBI');
+const KUBIXAbi = require('./ABI/KUBI');
 const KUBIXadress = "0x1D8630A8A34ae414c925ebF87FD27af66f3A52e8"
 
 
 //imports ABI and sets contract adress for the DAO
-const DAOAbi = require("../../ABI/KUBIDAO")
+const DAOAbi = require("./ABI/KUBIDAO")
 const DAOaddress =  "0xf191fE5A4332D27EA504B298b5DB8595c830F4C6"
 
 

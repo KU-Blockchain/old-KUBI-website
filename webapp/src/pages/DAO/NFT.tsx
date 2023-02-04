@@ -2,7 +2,7 @@ import React from "react";
 import {ethers} from "ethers";
 
 
-import myNFT  from "../../ABI/NFT.json"
+import myNFT  from "./ABI/NFT.json"
 
 
 
@@ -31,8 +31,6 @@ if (window.ethereum) {
         await deployedNFT.deployed()
         console.log("Contract deployed to address:", deployedNFT.address)
         this.setState({deployAddress: deployedNFT.address})
-
-
 
 
     
