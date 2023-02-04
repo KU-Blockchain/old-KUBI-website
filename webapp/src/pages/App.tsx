@@ -13,6 +13,7 @@ import Deploy from "./DAO/deploy";
 import Lock from "./DAO/lock";
 import NFT from "./DAO/NFT";
 import Calc from "./DAO/calc"
+import Mint from "./DAO/mint"
 
 import About from "./About/About";
 import AboutKUBI from "./About/AboutKUBI";
@@ -47,6 +48,7 @@ function App() {
         <Route path="/DAO/deploy" element={<Deploy />} />
         <Route path="/DAO/deploy/lock" element={<Lock />} />
         <Route path="/DAO/deploy/NFT" element={<NFT />} />
+        <Route path="/DAO/deploy/mint" element={<Mint />} />
         <Route path="/DAO/calculator" element={<Calc />} />
         <Route path="/storefront" element={<StoreFront />} />
         <Route path="/aboutBlockchain" element={<AboutBlockchain />} />

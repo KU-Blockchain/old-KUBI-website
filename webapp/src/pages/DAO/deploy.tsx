@@ -21,6 +21,13 @@ function deploy() {
           </button>
         </a>
     </div>
+    <div> 
+        <a href= "/DAO/deploy/mint">
+          <button>
+            NFT Mint
+          </button>
+        </a>
+    </div>
     </>
   );
 };
