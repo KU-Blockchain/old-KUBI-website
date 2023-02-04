@@ -23,9 +23,11 @@ const StoreFront = () => {
           marginRight: 50,
         }}
       >
+        <div style={{marginBottom:30}}>
         <Text align="center" size="xl" weight={700} mt="md">
           Redeem Your KUBIX
         </Text>
+        </div>
         <SimpleGrid cols={2}>
           <Container>
             <Group>

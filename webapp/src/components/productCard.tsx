@@ -68,17 +68,17 @@ export const ProductCard: React.FC<IproductCardProps> = (props: IproductCardProp
   ));
 */
   return (
-    <Card withBorder radius="md" className={classes.card} style={{margin: 30, width: 200}}>
+    <Card withBorder radius="md" className={classes.card} style={{margin: 10, width: 300}}>
       <Card.Section className={classes.imageSection}>
-        <div style={{ width: 180 }}>
+        <div style={{ width: 250 }}>
         <Image src={props.frontImage} alt="product image"  />
         </div>
       </Card.Section>
 
       <Group position="apart" mt="md">
-        <div>
-          <Text weight={500}>{props.title}</Text>
-          <Text size="xs" color="dimmed">
+        <div style={{marginBottom:10}}>
+          <Text size="xl" weight={500}>{props.title}</Text>
+          <Text size="md" color="dimmed">
             {props.year}
           </Text>
         </div>
@@ -95,7 +95,7 @@ export const ProductCard: React.FC<IproductCardProps> = (props: IproductCardProp
           </div>
 
           <Button radius="xl" style={{ flex: 1 }}>
-            Redeem KUBIX
+            Redeem Item
           </Button>
         </Group>
       </Card.Section>
