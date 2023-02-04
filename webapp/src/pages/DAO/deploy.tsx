@@ -15,6 +15,7 @@ function deploy() {
         </a>
     </div>
     <div> 
+      ONLY USE THIS if deploying new contract. use mint to get NFT 
         <a href= "/DAO/deploy/NFT">
           <button>
             NFT Contract
