@@ -18,5 +18,5 @@ export function KUBITitleAnimation() {
       }, 40);
     }
   }, [index]);
-  return <Title style={{font: "Courier", marginLeft: 20}}>{text}</Title>;
+  return <Title order={1} style={{fontWeight: 500, marginLeft: 20}}>{text}</Title>;
 }
