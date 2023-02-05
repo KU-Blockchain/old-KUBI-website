@@ -21,19 +21,20 @@ class Calculator extends React.Component<{}, State> {
 
   handleChange(value: string, type: string) {
     if (type == "difficulty") {
-      this.setState({ difficulty: value });
-      this.calcKUBIX();
+      this.setState({ difficulty: value }, () => {this.calcKUBIX();});
+      
+      
     }
     if (type == "time") {
-      this.setState({ time: value });
-      this.calcKUBIX();
+      this.setState({ time: value }, () => {this.calcKUBIX();});
+      
     }
   }
 
   calcKUBIX() {
     // eslint-disable-next-line @typescript-eslint/no-this-alias
     let multiplier = 0;
-    console.log(this.state.difficulty);
+    
 
     if (this.state.difficulty == "easy") {
       multiplier = 16.5;
@@ -68,7 +69,8 @@ class Calculator extends React.Component<{}, State> {
             placeholder="easy, medium, hard, or very hard"
             label="Difficulty"
             onChange={(event) =>
-              this.handleChange(event.currentTarget.value, "difficulty")
+              this.handleChange(event.currentTarget.value, "difficulty") 
+              
             }
             value={this.state.difficulty}
             withAsterisk
