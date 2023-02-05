@@ -33,7 +33,6 @@ if (window.ethereum) {
 
         const NFTaddress = "0x2B55E639d3191441651543D3A6b31e3FF0304b96"
         const NFTcontract = new ethers.Contract(NFTaddress,myNFT.abi , signer);
-        console.log("check")
 
         let nftTxn = await NFTcontract.mintNFT(address, tokenURI)
         await nftTxn.wait()

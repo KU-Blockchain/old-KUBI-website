@@ -42,6 +42,7 @@ class DAO extends React.Component<{}, State> {
 
       //initalizes metamask provider
       let provider = new ethers.providers.Web3Provider(window.ethereum);
+      
       window.ethereum.request({method:'eth_requestAccounts'}).then(async (res: any) => {
           
           //gets account addrss

@@ -8,27 +8,19 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-contract KUBIX{
-    function balanceOf(address) public view virtual override returns (uint256){}
-}
 
 contract MyNFT is ERC721URIStorage, Ownable {
     
-    KUBIX kubix;
 
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
     constructor() ERC721("MyNFT", "NFT") {}
 
-    function Existing(address _t) public {
-        
-    }
 
-    function checkUpkeep( bytes calldata) external view returns(bool upkeepNeeded, bytes memory){
-       kubix = Deployed('0x1D8630A8A34ae414c925ebF87FD27af66f3A52e8');
-       if(kubix.balanceOf(owner) == )
-
+    //just have a function that will only change metadata when called and balance checked
+    function upgrade(){
+        // if adress balance that owns token id has 100 KUBIX can upgrade. else cant
     }
 
     function mintNFT(address recipient, string memory tokenURI)
