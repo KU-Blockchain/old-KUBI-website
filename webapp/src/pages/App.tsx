@@ -8,7 +8,7 @@ import Events from "./Events";
 
 import StoreFront from "./StoreFront/StoreFront";
 
-import DAO from "./DAO/DAO";
+import DAOhome from "./DAO/DAOhome";
 import Deploy from "./DAO/deploy";
 import Lock from "./DAO/lock";
 import NFT from "./DAO/NFT";
@@ -42,7 +42,7 @@ function App() {
       <HeaderSimple links={link}></HeaderSimple>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/DAO" element={<DAO />} />
+        <Route path="/DAO" element={<DAOhome />} />
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/DAO/deploy" element={<Deploy />} />
