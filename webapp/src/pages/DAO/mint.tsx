@@ -4,7 +4,7 @@ import {ethers} from "ethers";
 
 import Mint from "./NFTmetadata/testNFT.json"
 import myNFT from "./ABI/NFT.json"
-import { LoadingOverlay } from "@mantine/core";
+
 
 
 

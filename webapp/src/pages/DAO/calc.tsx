@@ -1,6 +1,5 @@
 /* eslint-disable */
 import React from "react";
-import { useEffect } from "react";
 import { TextInput } from "@mantine/core";
 
 interface State {
@@ -32,7 +31,7 @@ class Calculator extends React.Component<{}, State> {
   }
 
   calcKUBIX() {
-    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    
     let multiplier = 0;
     
     if (isNaN(+this.state.time)){
@@ -84,7 +83,6 @@ class Calculator extends React.Component<{}, State> {
               
             }
             value={this.state.difficulty}
-            withAsterisk
           />
 
           <TextInput
@@ -94,7 +92,6 @@ class Calculator extends React.Component<{}, State> {
             onChange={(event) =>
               this.handleChange(event.currentTarget.value, "time")
             }
-            withAsterisk
           />
         </div>
         
