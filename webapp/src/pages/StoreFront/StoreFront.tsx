@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Group, Text, Title, SimpleGrid, Container, Button } from "@mantine/core";
+import { Group, Flex, Text, Title, SimpleGrid, Container, Button } from "@mantine/core";
 import blackTee from "./merchImages/BlackTee.png";
 import colorfulTee from "./merchImages/ColorfulTee.png";
 import waterBottle from "./merchImages/WaterBottle.png";
@@ -28,7 +28,7 @@ const StoreFront = () => {
       
         <Button component="a" href= "/DAO/deploy">Click here to connect metamask</Button>
         </Group>
-        <SimpleGrid cols={2}>
+        <Flex>
           <Container>
           <Title align="center">
         Available Items
@@ -68,7 +68,7 @@ const StoreFront = () => {
           </Container>
 
           <FaqSimple></FaqSimple>
-        </SimpleGrid>
+        </Flex>
       </div>
     </>
   );
