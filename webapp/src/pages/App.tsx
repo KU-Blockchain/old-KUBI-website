@@ -7,7 +7,7 @@ import Home from "./Home";
 import About from "./About/About";
 import Events from "./Events";
 import StoreFront from "./StoreFront/StoreFront";
-import theme from "./theme";
+
 
 
 import Deploy from "./DAO/deploy";
@@ -29,9 +29,9 @@ const link = [
 function App() {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS theme={{
-      fontFamily: 'Verdana, sans-serif',
-      fontFamilyMonospace: 'Monaco, Courier, monospace',
-      headings: { fontFamily: 'Greycliff CF, sans-serif' },
+      fontFamily: 'Courier',
+      fontFamilyMonospace: ' Courier',
+      headings: {   fontFamily: 'Courier New' },
       colorScheme: 'dark'
     }}>
       <MantineProvider inherit>
