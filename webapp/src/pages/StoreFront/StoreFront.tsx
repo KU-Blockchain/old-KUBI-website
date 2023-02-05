@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Group, Text, SimpleGrid, Container, Button } from "@mantine/core";
+import { Group, Text, Title, SimpleGrid, Container, Button } from "@mantine/core";
 import blackTee from "./merchImages/BlackTee.png";
 import colorfulTee from "./merchImages/ColorfulTee.png";
 import waterBottle from "./merchImages/WaterBottle.png";
@@ -7,6 +7,7 @@ import crewNeck from "./merchImages/WhiteCrewneck.png";
 import jayhawk from "./jayhawk-4.png";
 import { ProductCard } from "../../components/productCard";
 import { FaqSimple } from "../../components/FAQs";
+
 
 const StoreFront = () => {
   return (
@@ -29,6 +30,9 @@ const StoreFront = () => {
         </Group>
         <SimpleGrid cols={2}>
           <Container>
+          <Title align="center">
+        Available Items
+      </Title>
             <Group>
               <ProductCard
                 frontImage={blackTee}
