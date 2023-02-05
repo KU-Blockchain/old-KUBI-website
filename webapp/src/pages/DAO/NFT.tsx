@@ -48,9 +48,6 @@ render(){
       <div>
         Deployed at address: {this.state.deployAddress|| " loading..."} 
       </div>
-      <div>
-       URI 
-      </div>
     </>
   );
 };
