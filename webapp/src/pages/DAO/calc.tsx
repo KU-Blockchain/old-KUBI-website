@@ -15,7 +15,7 @@ class Calculator extends React.Component<{}, State> {
     this.state = {
       difficulty: "",
       time: "",
-      totalKUBIX: "",
+      totalKUBIX: "0",
     };
   }
 
@@ -35,35 +35,46 @@ class Calculator extends React.Component<{}, State> {
     // eslint-disable-next-line @typescript-eslint/no-this-alias
     let multiplier = 0;
     
+    if (isNaN(+this.state.time)){
+        this.setState({ totalKUBIX: "not valid time" });
+        
 
-    if (this.state.difficulty == "easy") {
-      multiplier = 16.5;
-      this.setState({
-        totalKUBIX: (multiplier * +this.state.time + 1).toString(),
-      });
-    } else if (this.state.difficulty == "medium") {
-      multiplier = 24;
-      this.setState({
-        totalKUBIX: (multiplier * +this.state.time + 4).toString(),
-      });
-    } else if (this.state.difficulty == "hard") {
-      multiplier = 30;
-      this.setState({
-        totalKUBIX: (multiplier * +this.state.time + 10).toString(),
-      });
-    } else if (this.state.difficulty == "very hard") {
-      multiplier = 37.5;
-      this.setState({
-        totalKUBIX: (multiplier * +this.state.time + 25).toString(),
-      });
-    } else {
-      this.setState({ totalKUBIX: "not valid difficulty" });
+    }
+    else{
+
+        if (this.state.difficulty == "easy") {
+        multiplier = 16.5;
+        this.setState({
+            totalKUBIX: (multiplier * +this.state.time + 1).toString(),
+        });
+        } else if (this.state.difficulty == "medium") {
+        multiplier = 24;
+        this.setState({
+            totalKUBIX: (multiplier * +this.state.time + 4).toString(),
+        });
+        } else if (this.state.difficulty == "hard") {
+        multiplier = 30;
+        this.setState({
+            totalKUBIX: (multiplier * +this.state.time + 10).toString(),
+        });
+        } else if (this.state.difficulty == "very hard") {
+        multiplier = 37.5;
+        this.setState({
+            totalKUBIX: (multiplier * +this.state.time + 25).toString(),
+        });
+        } else {
+        this.setState({ totalKUBIX: "not valid difficulty" });
+        }
     }
   }
 
   render() {
     return (
       <>
+      <div>
+        KUBIX CALCULATOR
+      </div>
+      
         <div>
           <TextInput
             placeholder="easy, medium, hard, or very hard"
@@ -86,8 +97,8 @@ class Calculator extends React.Component<{}, State> {
             withAsterisk
           />
         </div>
-        <div></div>
-        <div>answer: {this.state.totalKUBIX}</div>
+        
+        <div>answer: {this.state.totalKUBIX} KUBIX</div>
       </>
     );
   }
