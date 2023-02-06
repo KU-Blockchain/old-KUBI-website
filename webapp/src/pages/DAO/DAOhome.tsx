@@ -120,14 +120,14 @@ render(){
     Balance of the DAO: {this.state.DAO || " switch to polygon network"}
     </div>
     <div> 
-        <a href= "/DAO/deploy">
+        <a href= "DAO/deploy">
           <button>
             Deploy
           </button>
         </a>
     </div>
     <div> 
-        <a href= "/DAO/calculator">
+        <a href= "DAO/calculator">
           <button>
             Calculator
           </button>

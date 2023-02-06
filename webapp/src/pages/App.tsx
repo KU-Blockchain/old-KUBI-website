@@ -21,15 +21,38 @@ import AboutBlockchain from "./About/AboutBlockchain";
 
 
 
-const link = [
+var link1 = [
   { link: "/", label: "Home" },
   { link: "/about", label: "About" },
   { link: "/events", label: "Events" },
   { link: "/DAO", label: "DAO" },
   { link: "/storefront", label: "Storefront" },
 ];
+
+
+var link2 = [
+  { link: "/DAO", label: "DAO Home" },
+  { link: "/DAO/calculator", label: "Calculator" },
+  { link: "/DAO/deploy", label: "Deploy" },
+  
+  
+];
+var link = [{link: "", label:""}]
+
+
+
 function App() {
+
+  if(((window.location.pathname).split("/"))[1] == "DAO"){
+    link =  link2
+   
+  }
+  else{
+    link =link1
+  }
+  
   return (
+    
     <MantineProvider withGlobalStyles withNormalizeCSS theme={{
       fontFamily: 'Verdana, sans-serif',
       fontFamilyMonospace: 'Monaco, Courier, monospace',
@@ -37,19 +60,20 @@ function App() {
       colorScheme: 'dark'
     }}>
       <MantineProvider inherit>
-        
+      
+      
       
       <HeaderSimple links={link}></HeaderSimple>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/DAO" element={<DAOhome />} />
+        <Route path="/DAO/deploy" element={<Deploy />} />
+        <Route path="/DAO/deploy/mint" element={<Mint />} />
+        <Route path="/DAO/deploy/lock" element={<Lock />} />
+        <Route path="/DAO/deploy/NFT" element={<Lock />} />
+        <Route path="/DAO/calculator" element={<Calc />} />
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/DAO/deploy" element={<Deploy />} />
-        <Route path="/DAO/deploy/lock" element={<Lock />} />
-        <Route path="/DAO/deploy/NFT" element={<NFT />} />
-        <Route path="/DAO/deploy/mint" element={<Mint />} />
-        <Route path="/DAO/calculator" element={<Calc />} />
         <Route path="/storefront" element={<StoreFront />} />
         <Route path="/aboutBlockchain" element={<AboutBlockchain />} />
         <Route path="/aboutKUBI" element={<AboutKUBI />} />

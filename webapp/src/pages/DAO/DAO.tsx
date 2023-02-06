@@ -17,9 +17,9 @@ import Mint from "./mint"
 
 
 const link = [
-  { link: "DAO/calculator", label: "Calculator" },
-  { link: "DAO/deploy", label: "Deploy" },
-  { link: "DAO/home", label: "Home" },
+  { link: "calculator", label: "Calculator" },
+  { link: "deploy", label: "Deploy" },
+  { link: "home", label: "Home" },
 ];
 function DAO() {
   return (
@@ -35,12 +35,11 @@ function DAO() {
       <HeaderSimple links={link}></HeaderSimple>
       <Routes>
         
-        <Route path="/DAO" element={<DAOhome />} />
-
+        <Route path="/home" element={<DAOhome />} />
         <Route path="/DAO/deploy" element={<Deploy />} />
-        <Route path="/DAO/deploy/lock" element={<Lock />} />
-        <Route path="/DAO/deploy/NFT" element={<NFT />} />
-        <Route path="/DAO/deploy/mint" element={<Mint />} />
+        <Route path="/deploy/lock" element={<Lock />} />
+        <Route path="/deploy/NFT" element={<NFT />} />
+        <Route path="/deploy/mint" element={<Mint />} />
         <Route path="/DAO/calculator" element={<Calc />} />
         
       </Routes>

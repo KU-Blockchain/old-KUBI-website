@@ -8,7 +8,7 @@ function deploy() {
   return (
     <>
     <div> 
-        <a href= "/DAO/deploy/lock">
+        <a href= "deploy/lock">
           <button>
             Lock Contract
           </button>
@@ -16,14 +16,14 @@ function deploy() {
     </div>
     <div> 
       ONLY USE THIS if deploying new contract. use mint to get NFT 
-        <a href= "/DAO/deploy/NFT">
+        <a href= "deploy/NFT">
           <button>
             NFT Contract
           </button>
         </a>
     </div>
     <div> 
-        <a href= "/DAO/deploy/mint">
+        <a href= "deploy/mint">
           <button>
             NFT Mint
           </button>
