@@ -1,6 +1,6 @@
 # KUBI Website
 
-This repository is for Website 2.0 - our new website!
+This repository holds an earlier version of our recreated website, which is now out of date. Please reference our KUBI-website repo for the new version. 
 
 The website will be able to integrate with the DAO, DeWork, Github, Discord, Notion, Storefront, and KUBI Calendar. 
 
